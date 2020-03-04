@@ -18,7 +18,13 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func btnLogin(_ sender: Any) {
+        if (txtName.text == "Abhishek" && txtPassword.text == "something"){
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
+            navigationController?.pushViewController(secondVC, animated: true)
+        }
+    }
 }
 
