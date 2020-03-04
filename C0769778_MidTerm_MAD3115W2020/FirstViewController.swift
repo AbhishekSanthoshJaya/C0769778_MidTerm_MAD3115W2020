@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,6 +25,7 @@ class FirstViewController: UIViewController {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
             navigationController?.pushViewController(secondVC, animated: true)
+            print("login")
         }
     }
 }
