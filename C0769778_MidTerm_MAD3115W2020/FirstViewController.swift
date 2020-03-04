@@ -26,6 +26,9 @@ class FirstViewController: UIViewController {
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
             navigationController?.pushViewController(secondVC, animated: true)
             print("login")
+            else {
+                
+            }
         }
     }
 }
