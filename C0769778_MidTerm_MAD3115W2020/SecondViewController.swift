@@ -35,9 +35,9 @@ class SecondViewController: UIViewController {
     }
     
     func loadCustomers(){
-        customerList.append(Customer(customerId: "A001", firstName: "Abhishek", lastName: "Santhosh Jaya"))
-        customerList.append(Customer(customerId: "A002", firstName: "Prakash", lastName: "Rana"))
-        customerList.append(Customer(customerId: "A003", firstName: "NotRaghav", lastName: "Irrelevant"))
+        customerList.append(Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
+        customerList.append(Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))
+        customerList.append(Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com"))
     }
     
 }
@@ -58,8 +58,8 @@ class SecondViewController: UIViewController {
            
            let customer = customerList[indexPath.row]
            //cell?.textLabel?.text = customer.customerId
-           cell?.textLabel?.text = customer.firstName
-           //cell?.textLabel?.text = customer.lastName
+           cell?.textLabel?.text = customer.name
+           //cell?.textLabel?.text = customer.email
            
            return cell!
        }

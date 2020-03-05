@@ -12,12 +12,12 @@ import UIKit
 class Customer
 {
      var customerId: String
-     var firstName: String
-     var lastName: String
+     var name: String
+     var email: String
     
-    init(customerId: String, firstName: String, lastName: String) {
+    init(customerId: String, name: String, email: String) {
         self.customerId = customerId
-        self.firstName = firstName
-        self.lastName = lastName
+        self.name = name
+        self.email = email
     }
 }
