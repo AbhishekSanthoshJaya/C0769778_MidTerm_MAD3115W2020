@@ -17,6 +17,7 @@
 		9B21FD70241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD6F241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift */; };
 		9B21FD8524105F3B006F7AED /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD8424105F3B006F7AED /* SecondViewController.swift */; };
 		9BBE15B224119E12003ECD32 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B124119E12003ECD32 /* Customer.swift */; };
+		9BBE15B424119F5E003ECD32 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B324119F5E003ECD32 /* DataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9B21FD71241051CA006F7AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B21FD8424105F3B006F7AED /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9BBE15B124119E12003ECD32 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		9BBE15B324119F5E003ECD32 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				9B21FD58241051CA006F7AED /* LaunchScreen.storyboard */,
 				9B21FD5B241051CA006F7AED /* Info.plist */,
 				9BBE15B124119E12003ECD32 /* Customer.swift */,
+				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				9B21FD8524105F3B006F7AED /* SecondViewController.swift in Sources */,
 				9BBE15B224119E12003ECD32 /* Customer.swift in Sources */,
 				9B21FD52241051C8006F7AED /* FirstViewController.swift in Sources */,
+				9BBE15B424119F5E003ECD32 /* DataRepository.swift in Sources */,
 				9B21FD4E241051C8006F7AED /* AppDelegate.swift in Sources */,
 				9B21FD50241051C8006F7AED /* SceneDelegate.swift in Sources */,
 			);
