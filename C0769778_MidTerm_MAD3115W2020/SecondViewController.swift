@@ -18,13 +18,14 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addlogOutButton()
+        self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
         loadCustomers()
     }
     
     private func addlogOutButton()
     {
-        let logOutButton = UIBarButtonItem(title: "LOG OUT", style: .plain, target: self, action: #selector(self.goBack))
+        let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.goBack))
         
         self.navigationItem.leftBarButtonItem = logOutButton
     }
@@ -34,6 +35,21 @@ class SecondViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    //BUTTON TO ADD NEW CUSTOMER
+    private func addNewCustomerButton()
+    {
+        let newCustomerButton = UIBarButtonItem(title: "New Customer", style: .plain, target: self, action: #selector(self.addCustomer))
+        
+        self.navigationItem.rightBarButtonItem = newCustomerButton
+    }
+    
+    @objc func addCustomer()
+    {
+        self.navigationController?.popViewController(animated: true)
+        //Replace with proper code
+    }
+    
+    //CUSTOMER OBJECTS
     func loadCustomers(){
         customerList.append(Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
         customerList.append(Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))

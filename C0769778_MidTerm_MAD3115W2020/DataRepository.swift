@@ -14,7 +14,8 @@ class DataRepository {
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
    
-private init(){}
+private init(){
+}
     
 static func getInstance() -> DataRepository{
 return repoObj
