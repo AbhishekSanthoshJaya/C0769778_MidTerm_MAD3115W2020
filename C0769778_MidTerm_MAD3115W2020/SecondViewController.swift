@@ -54,6 +54,7 @@ class SecondViewController: UIViewController {
         customerList.append(Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
         customerList.append(Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))
         customerList.append(Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com"))
+        
     }
     
 }
