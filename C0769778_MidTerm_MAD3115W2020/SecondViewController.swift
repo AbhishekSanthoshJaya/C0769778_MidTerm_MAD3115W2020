@@ -11,12 +11,20 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
+    lazy var customerList: [Customer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    func loadCustomers(){
+        customerList.append(Customer(customerId: "A001", firstName: "Abhishek", lastName: "Santhosh Jaya"))
+        customerList.append(Customer(customerId: "A002", firstName: "Prakash", lastName: "Rana"))
+        customerList.append(Customer(customerId: "A003", firstName: "NotRaghav", lastName: "Irrelevant"))
+    }
+    
     
 
     /*

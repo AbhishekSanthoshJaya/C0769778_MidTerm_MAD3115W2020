@@ -31,7 +31,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        if (txtName.text == "Abhishek" && txtPassword.text == "something"){
+        if (txtName.text == "Abhishek" && txtPassword.text == "abhishek124"){
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
             
