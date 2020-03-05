@@ -12,7 +12,7 @@ import UIKit
 class DataRepository {
    
 static private var repoObj = DataRepository()
-lazy var customerList = Dictionary<String, Customer>()
+lazy var customerDictionary = Dictionary<String, Customer>()
    
 private init(){
      

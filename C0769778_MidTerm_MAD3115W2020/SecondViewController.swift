@@ -57,8 +57,8 @@ class SecondViewController: UIViewController {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
            
            let customer = customerList[indexPath.row]
-           cell?.textLabel?.text = customer.customerId
-           //cell?.textLabel?.text = customer.firstName
+           //cell?.textLabel?.text = customer.customerId
+           cell?.textLabel?.text = customer.firstName
            //cell?.textLabel?.text = customer.lastName
            
            return cell!

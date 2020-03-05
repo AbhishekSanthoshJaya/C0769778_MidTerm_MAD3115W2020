@@ -105,7 +105,6 @@
 		9B21FD4C241051C8006F7AED /* C0769778_MidTerm_MAD3115W2020 */ = {
 			isa = PBXGroup;
 			children = (
-				9BBE15B52411A140003ECD32 /* Classes */,
 				9B21FD4D241051C8006F7AED /* AppDelegate.swift */,
 				9B21FD4F241051C8006F7AED /* SceneDelegate.swift */,
 				9B21FD51241051C8006F7AED /* FirstViewController.swift */,
@@ -114,6 +113,7 @@
 				9B21FD56241051CA006F7AED /* Assets.xcassets */,
 				9B21FD58241051CA006F7AED /* LaunchScreen.storyboard */,
 				9B21FD5B241051CA006F7AED /* Info.plist */,
+				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
 				9BBE15B124119E12003ECD32 /* Customer.swift */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020;
@@ -135,14 +135,6 @@
 				9B21FD71241051CA006F7AED /* Info.plist */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020UITests;
-			sourceTree = "<group>";
-		};
-		9BBE15B52411A140003ECD32 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
