@@ -13,10 +13,24 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var lblCustomerList: UILabel!
     lazy var customerList: [Customer] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.addlogOutButton()
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    private func addlogOutButton()
+    {
+        let logOutButton = UIBarButtonItem(title: "LOG OUT", style: .plain, target: self, action: #selector(self.goBack))
+        
+        self.navigationItem.leftBarButtonItem = logOutButton
+    }
+    
+    @objc func goBack()
+    {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func loadCustomers(){
