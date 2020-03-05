@@ -45,7 +45,10 @@ class SecondViewController: UIViewController {
     
     @objc func addCustomer()
     {
-        self.navigationController?.popViewController(animated: true)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerVC") as! AddNewCustomerViewController
+        
+        navigationController?.pushViewController(addNewCustomerVC, animated: true)
         //Replace with proper code
     }
     
