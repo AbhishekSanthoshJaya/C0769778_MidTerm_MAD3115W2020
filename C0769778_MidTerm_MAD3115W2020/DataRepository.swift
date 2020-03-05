@@ -14,12 +14,17 @@ class DataRepository {
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
    
-private init(){
-     
-}
+private init(){}
     
 static func getInstance() -> DataRepository{
 return repoObj
     }
+    
+func addCustomer(customerId: String, Customer: Customer)
+  {
+    customerDictionary.updateValue(Customer, forKey: customerId)
+  }
+  
 }
+
 
