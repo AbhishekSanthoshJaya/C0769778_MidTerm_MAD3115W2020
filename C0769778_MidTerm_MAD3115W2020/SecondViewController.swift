@@ -12,13 +12,14 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
     lazy var customerList: [Customer] = []
-    
+    @IBOutlet weak var tblViewCustomerList: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addlogOutButton()
         self.navigationItem.hidesBackButton = true
+        loadCustomers()
     }
     
     private func addlogOutButton()
@@ -39,7 +40,32 @@ class SecondViewController: UIViewController {
         customerList.append(Customer(customerId: "A003", firstName: "NotRaghav", lastName: "Irrelevant"))
     }
     
-    
+}
+   extension SecondViewController: UITableViewDataSource, UITableViewDelegate
+   {
+       func numberOfSections(in tableView: UITableView) -> Int
+       {
+           return 1
+       }
+       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+       {
+           return customerList.count
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+       {
+           let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
+           
+           let customer = customerList[indexPath.row]
+           cell?.textLabel?.text = customer.customerId
+           //cell?.textLabel?.text = customer.firstName
+           //cell?.textLabel?.text = customer.lastName
+           
+           return cell!
+       }
+       
+       
+   }
 
     /*
     // MARK: - Navigation
@@ -51,4 +77,4 @@ class SecondViewController: UIViewController {
     }
     */
 
-}
+
