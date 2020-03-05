@@ -13,11 +13,21 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    
+    @IBOutlet weak var swchRememberMe: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let ud = UserDefaults.standard
+        let name = ud.string(forKey:"name")
+        let password = ud.string(forKey: "password")
+        if let nm = name
+        {
+            txtName.text = nm
+        }
+        if let pw  = password
+        {
+            txtPassword.text = pw
+        }
     }
     
     @IBAction func btnLogin(_ sender: Any) {
@@ -26,9 +36,12 @@ class FirstViewController: UIViewController {
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
             navigationController?.pushViewController(secondVC, animated: true)
             print("login")
-            else {
-                
+            if swchRememberMe.isOn {
+                let defaults = UserDefaults.standard
+                let name = defaults.set(txtName.text, forKey: "name")
+                let password = defaults.set(txtPassword.text, forKey: "password")
             }
+            
         }
     }
 }
