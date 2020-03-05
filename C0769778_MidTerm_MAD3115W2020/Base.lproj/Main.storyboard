@@ -107,11 +107,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-aj-N5t">
-                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CUSTOMER LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2T-4z-cHt">
-                                <rect key="frame" x="128" y="95" width="168" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUSTOMERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2T-4z-cHt">
+                                <rect key="frame" x="149" y="95" width="158" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -122,11 +122,11 @@
                         <constraints>
                             <constraint firstItem="pRN-aj-N5t" firstAttribute="top" secondItem="s2T-4z-cHt" secondAttribute="bottom" constant="8" symbolic="YES" id="18s-XU-gsf"/>
                             <constraint firstItem="pRN-aj-N5t" firstAttribute="bottom" secondItem="oAk-i2-Wh3" secondAttribute="bottom" id="AIs-2x-pMf"/>
-                            <constraint firstItem="s2T-4z-cHt" firstAttribute="centerX" secondItem="pRN-aj-N5t" secondAttribute="centerX" id="ATI-Oc-Kzn"/>
+                            <constraint firstItem="s2T-4z-cHt" firstAttribute="centerX" secondItem="pRN-aj-N5t" secondAttribute="centerX" constant="21" id="ATI-Oc-Kzn"/>
                             <constraint firstItem="oAk-i2-Wh3" firstAttribute="trailing" secondItem="pRN-aj-N5t" secondAttribute="trailing" id="EvQ-lA-q23"/>
                             <constraint firstItem="oAk-i2-Wh3" firstAttribute="bottom" secondItem="pRN-aj-N5t" secondAttribute="bottom" id="ItJ-Px-Z5s"/>
                             <constraint firstItem="pRN-aj-N5t" firstAttribute="trailing" secondItem="oAk-i2-Wh3" secondAttribute="trailing" id="Ro6-GE-Dk3"/>
-                            <constraint firstItem="s2T-4z-cHt" firstAttribute="leading" secondItem="oAk-i2-Wh3" secondAttribute="leading" constant="128" id="iSb-hI-S48"/>
+                            <constraint firstItem="s2T-4z-cHt" firstAttribute="leading" secondItem="oAk-i2-Wh3" secondAttribute="leading" constant="149" id="iSb-hI-S48"/>
                             <constraint firstItem="pRN-aj-N5t" firstAttribute="leading" secondItem="oAk-i2-Wh3" secondAttribute="leading" id="jmp-wL-2Jk"/>
                             <constraint firstItem="s2T-4z-cHt" firstAttribute="top" secondItem="oAk-i2-Wh3" secondAttribute="top" constant="51" id="kc5-OT-QHf"/>
                             <constraint firstItem="pRN-aj-N5t" firstAttribute="leading" secondItem="oAk-i2-Wh3" secondAttribute="leading" id="ntI-Vk-WiV"/>

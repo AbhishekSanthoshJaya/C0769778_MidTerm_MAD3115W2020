@@ -36,7 +36,7 @@ class FirstViewController: UIViewController {
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
             
             navigationController?.pushViewController(secondVC, animated: true)
-            print("login")
+            
             if swchRememberMe.isOn {
                 let defaults = UserDefaults.standard
                 let name = defaults.set(txtName.text, forKey: "name")
