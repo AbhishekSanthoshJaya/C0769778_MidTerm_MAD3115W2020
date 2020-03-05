@@ -34,6 +34,7 @@ class FirstViewController: UIViewController {
         if (txtName.text == "Abhishek" && txtPassword.text == "something"){
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
+            
             navigationController?.pushViewController(secondVC, animated: true)
             print("login")
             if swchRememberMe.isOn {
@@ -41,6 +42,13 @@ class FirstViewController: UIViewController {
                 let name = defaults.set(txtName.text, forKey: "name")
                 let password = defaults.set(txtPassword.text, forKey: "password")
             }
+        }
+        else {
+        let alertController = UIAlertController(title: "Error", message:
+            "Incorrect Username or Password", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
             
         }
     }

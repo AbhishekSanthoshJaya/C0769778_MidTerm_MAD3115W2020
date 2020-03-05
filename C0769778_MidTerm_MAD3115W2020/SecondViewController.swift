@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var lblCustomerList: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
