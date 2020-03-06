@@ -20,8 +20,7 @@ class AddNewCustomerViewController: UIViewController {
     @IBAction func btnAddNewCustomer(_ sender: Any) {
         var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!)
         DataRepository.getInstance().addCustomer(customer: c)
-        let alertController = UIAlertController(title: "Success", message:
-            "Customer Added", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alertController, animated: true, completion: nil)
     }

@@ -22,6 +22,11 @@ class CustomerListTableViewController: UIViewController {
         //DataRepository.getInstance().loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
+        
+    
     private func addlogOutButton()
     {
         let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.goBack))
@@ -74,9 +79,7 @@ class CustomerListTableViewController: UIViewController {
            //cell?.textLabel?.text = customer.email
            return cell!
        }
-       
-       
-   }
+    }
 
     /*
     // MARK: - Navigation

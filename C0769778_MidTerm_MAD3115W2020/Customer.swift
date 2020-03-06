@@ -11,13 +11,17 @@ import UIKit
 
 class Customer
 {
-     var customerId: String
-     var name: String
-     var email: String
+    var customerId: String
+    var name: String
+    var email: String
+    var userName: String
+    var password: String
     
-    init(customerId: String, name: String, email: String) {
+    init(customerId: String, name: String, email: String, userName: String, password: String) {
         self.customerId = customerId
         self.name = name
         self.email = email
+        self.userName = userName
+        self.password = password
     }
 }
