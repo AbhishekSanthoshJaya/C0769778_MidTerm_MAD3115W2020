@@ -11,7 +11,6 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
-    lazy var customerList: [Customer] = []
     @IBOutlet weak var tblViewCustomerList: UITableView!
     
     
@@ -20,7 +19,7 @@ class SecondViewController: UIViewController {
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
-        loadCustomers()
+        DataRepository.getInstance().loadData()
     }
     
     private func addlogOutButton()
@@ -63,14 +62,14 @@ class SecondViewController: UIViewController {
        }
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
        {
-           return customerList.count
+        return DataRepository.getInstance().customerListStorage.count
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
        {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
            
-           let customer = customerList[indexPath.row]
+        let customer = DataRepository.getInstance().customerListStorage[indexPath.row]
            //cell?.textLabel?.text = customer.customerId
            cell?.textLabel?.text = customer.name
            //cell?.textLabel?.text = customer.email

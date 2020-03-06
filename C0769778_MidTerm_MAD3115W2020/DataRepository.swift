@@ -13,7 +13,7 @@ class DataRepository {
    
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
-private lazy var customerListStorage: [Customer] = []
+lazy var customerListStorage: [Customer] = []
    
 private init(){
 }
