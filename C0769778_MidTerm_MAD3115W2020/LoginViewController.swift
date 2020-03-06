@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     @IBOutlet weak var txtName: UITextField!
@@ -33,9 +33,8 @@ class FirstViewController: UIViewController {
     @IBAction func btnLogin(_ sender: Any) {
         if (txtName.text == "Abhishek" && txtPassword.text == "abhishek124"){
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let secondVC = sb.instantiateViewController(identifier: "SecondVC") as! SecondViewController
-            
-            navigationController?.pushViewController(secondVC, animated: true)
+            let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+            navigationController?.pushViewController(customerListTableVC, animated: true)
             
             if swchRememberMe.isOn {
                 let defaults = UserDefaults.standard

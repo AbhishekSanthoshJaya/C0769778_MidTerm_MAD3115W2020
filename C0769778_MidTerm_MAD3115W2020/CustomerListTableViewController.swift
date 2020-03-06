@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class CustomerListTableViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
     @IBOutlet weak var tblViewCustomerList: UITableView!
@@ -53,7 +53,7 @@ class SecondViewController: UIViewController {
 
 }
 
-   extension SecondViewController: UITableViewDataSource, UITableViewDelegate
+   extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
    {
        func numberOfSections(in tableView: UITableView) -> Int
        {
@@ -67,8 +67,8 @@ class SecondViewController: UIViewController {
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
        {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
-        let customerArray = DataRepository.getInstance().dictionaryToArray()
-        let customer = customerArray?[indexPath.row]
+           let customerArray = DataRepository.getInstance().dictionaryToArray()
+           let customer = customerArray?[indexPath.row]
            //cell?.textLabel?.text = customer.customerId
            cell?.textLabel?.text = customer?.name
            //cell?.textLabel?.text = customer.email
