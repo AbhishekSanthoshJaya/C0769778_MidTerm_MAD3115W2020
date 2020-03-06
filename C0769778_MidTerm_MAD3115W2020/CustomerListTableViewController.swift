@@ -22,9 +22,9 @@ class CustomerListTableViewController: UIViewController {
         //DataRepository.getInstance().loadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        <#code#>
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        <#code#>
+//    }
         
     
     private func addlogOutButton()

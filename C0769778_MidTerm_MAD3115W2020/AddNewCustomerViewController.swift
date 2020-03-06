@@ -15,16 +15,23 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtNewCustomerEmail: UITextField!
     @IBOutlet weak var txtNewCustomerName: UITextField!
     @IBOutlet weak var txtNewCustomerNumber: UITextField!
-    
+    @IBOutlet weak var txtNewCustomerPassword: UITextField!
+    @IBOutlet weak var txtNewCustomerUserName: UITextField!
     
     @IBAction func btnAddNewCustomer(_ sender: Any) {
-        var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!)
+        var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
         DataRepository.getInstance().addCustomer(customer: c)
         let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.dismissView()}))
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func dismissView() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+        navigationController?.pushViewController(customerListTableVC, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,3 +49,5 @@ class AddNewCustomerViewController: UIViewController {
     */
 
 }
+
+

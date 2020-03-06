@@ -24,4 +24,10 @@ class Customer
         self.userName = userName
         self.password = password
     }
+    
+//    convenience init(customerId: String, name: String, email: String) {
+//        self.customerId = customerId
+//        self.name = name
+//        self.email = email
+//    }
 }

@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swchRememberMe: UISwitch!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let ud = UserDefaults.standard
