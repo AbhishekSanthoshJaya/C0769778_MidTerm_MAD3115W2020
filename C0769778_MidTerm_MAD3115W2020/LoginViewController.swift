@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
 
     
@@ -29,9 +30,10 @@ class LoginViewController: UIViewController {
             txtPassword.text = pw
         }
     }
-    
     @IBAction func btnLogin(_ sender: Any) {
-        if (txtName.text == "Abhishek" && txtPassword.text == "abhishek124"){
+        let customers = DataRepository.getInstance().dictionaryToArray()
+        for i in customers! {
+            if (txtName.text == i.userName && txtPassword.text == i.password){
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
             navigationController?.pushViewController(customerListTableVC, animated: true)
@@ -40,15 +42,22 @@ class LoginViewController: UIViewController {
                 let defaults = UserDefaults.standard
                 let name = defaults.set(txtName.text, forKey: "name")
                 let password = defaults.set(txtPassword.text, forKey: "password")
+                }
             }
         }
-        else {
+        if(txtName.text == "" || txtPassword.text == "") {
         let alertController = UIAlertController(title: "Error", message:
-            "Incorrect Username or Password", preferredStyle: .alert)
+            "Username/Password cannot be left blank", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
 
         self.present(alertController, animated: true, completion: nil)
-            
+          }
+        else {
+            let alertController = UIAlertController(title: "Error", message:
+                "Incorrect username/password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }

@@ -59,7 +59,6 @@ class CustomerListTableViewController: UIViewController {
     //CUSTOMER OBJECTS
 
 }
-
    extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
    {
        func numberOfSections(in tableView: UITableView) -> Int
