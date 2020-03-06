@@ -30,35 +30,41 @@ class LoginViewController: UIViewController {
             txtPassword.text = pw
         }
     }
-    @IBAction func btnLogin(_ sender: Any) {
-        let customers = DataRepository.getInstance().dictionaryToArray()
-        for i in customers! {
-            if (txtName.text == i.userName && txtPassword.text == i.password){
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
-            navigationController?.pushViewController(customerListTableVC, animated: true)
-            
-            if swchRememberMe.isOn {
-                let defaults = UserDefaults.standard
-                let name = defaults.set(txtName.text, forKey: "name")
-                let password = defaults.set(txtPassword.text, forKey: "password")
-                }
+    @IBAction func btnLogin(_ sender: Any)
+    {
+        
+        if (txtName.text == "" || txtPassword.text == "")
+            {
+          let alertController = UIAlertController(title: "Error", message: "Username/Password cannot be left blank", preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+          self.present(alertController, animated: true, completion: nil)
             }
-        }
-        if(txtName.text == "" || txtPassword.text == "") {
-        let alertController = UIAlertController(title: "Error", message:
-            "Username/Password cannot be left blank", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
 
-        self.present(alertController, animated: true, completion: nil)
-          }
-        else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Incorrect username/password", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-
-            self.present(alertController, animated: true, completion: nil)
+        let customers = DataRepository.getInstance().dictionaryToArray()
+        
+        for i in customers!
+        {
+            if (txtName.text == i.userName && txtPassword.text == i.password)
+            {
+                
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+                navigationController?.pushViewController(customerListTableVC, animated: true)
+                
+                if swchRememberMe.isOn
+                    {
+                    let defaults = UserDefaults.standard
+                    let name = defaults.set(txtName.text, forKey: "name")
+                    let password = defaults.set(txtPassword.text, forKey: "password")
+                    }
+                return
+            }
+        else
+            {
+          let alertController = UIAlertController(title: "Error", message: "Incorrect username/password", preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+          self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
 }
-
