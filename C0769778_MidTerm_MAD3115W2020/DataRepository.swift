@@ -14,7 +14,7 @@ class DataRepository {
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
 lazy var customerListStorage: [Customer] = []
-   
+    
 private init(){
 }
     
@@ -22,9 +22,10 @@ static func getInstance() -> DataRepository{
 return repoObj
     }
     
-func addCustomer(customerId: String, Customer: Customer)
+func addCustomer(customer: Customer)
   {
-    customerDictionary.updateValue(Customer, forKey: customerId)
+    let cid = customer.customerId
+    customerDictionary.updateValue(customer, forKey: cid)
   }
   
 func loadData(){

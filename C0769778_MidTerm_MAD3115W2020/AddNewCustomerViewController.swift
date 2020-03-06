@@ -14,8 +14,13 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtNewCustomerId: UITextField!
     @IBOutlet weak var txtNewCustomerEmail: UITextField!
     @IBOutlet weak var txtNewCustomerName: UITextField!
+    @IBOutlet weak var txtNewCustomerNumber: UITextField!
+    
     
     @IBAction func btnAddNewCustomer(_ sender: Any) {
+        var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!)
+        
+        DataRepository.getInstance().addCustomer(customer: c)
     }
     
     override func viewDidLoad() {
