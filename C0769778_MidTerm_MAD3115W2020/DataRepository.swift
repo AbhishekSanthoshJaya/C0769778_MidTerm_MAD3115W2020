@@ -13,7 +13,6 @@ class DataRepository {
    
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
-lazy var customerListStorage: [Customer] = []
     
 private init(){
 }
@@ -40,6 +39,7 @@ func loadData(){
     }
     
 func dictionaryToArray() -> [Customer]?{
+    var customerListStorage: [Customer] = []
     for i in customerDictionary{
         customerListStorage.append(i.value)
      }
