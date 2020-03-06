@@ -16,6 +16,7 @@
 		9B21FD65241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD64241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020Tests.swift */; };
 		9B21FD70241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD6F241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift */; };
 		9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */; };
+		9B880BA82412EDF900715485 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BA72412EDF900715485 /* Exceptions.swift */; };
 		9BBE15B224119E12003ECD32 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B124119E12003ECD32 /* Customer.swift */; };
 		9BBE15B424119F5E003ECD32 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B324119F5E003ECD32 /* DataRepository.swift */; };
 		9BBE15B72411B04B003ECD32 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */; };
@@ -54,6 +55,7 @@
 		9B21FD6F241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C0769778_MidTerm_MAD3115W2020UITests.swift; sourceTree = "<group>"; };
 		9B21FD71241051CA006F7AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
+		9B880BA72412EDF900715485 /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		9BBE15B124119E12003ECD32 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9BBE15B324119F5E003ECD32 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				9B21FD5B241051CA006F7AED /* Info.plist */,
 				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
 				9BBE15B124119E12003ECD32 /* Customer.swift */,
+				9B880BA72412EDF900715485 /* Exceptions.swift */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				9BBE15B224119E12003ECD32 /* Customer.swift in Sources */,
 				9B21FD52241051C8006F7AED /* LoginViewController.swift in Sources */,
 				9BBE15B424119F5E003ECD32 /* DataRepository.swift in Sources */,
+				9B880BA82412EDF900715485 /* Exceptions.swift in Sources */,
 				9B21FD4E241051C8006F7AED /* AppDelegate.swift in Sources */,
 				9B21FD50241051C8006F7AED /* SceneDelegate.swift in Sources */,
 			);
