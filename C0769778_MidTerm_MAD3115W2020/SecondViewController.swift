@@ -47,20 +47,14 @@ class SecondViewController: UIViewController {
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerVC") as! AddNewCustomerViewController
-        
         navigationController?.pushViewController(addNewCustomerVC, animated: true)
         //Replace with proper code
     }
     
     //CUSTOMER OBJECTS
-    func loadCustomers(){
-        customerList.append(Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
-        customerList.append(Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))
-        customerList.append(Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com"))
-        
-    }
-    
+
 }
+
    extension SecondViewController: UITableViewDataSource, UITableViewDelegate
    {
        func numberOfSections(in tableView: UITableView) -> Int
@@ -80,7 +74,6 @@ class SecondViewController: UIViewController {
            //cell?.textLabel?.text = customer.customerId
            cell?.textLabel?.text = customer.name
            //cell?.textLabel?.text = customer.email
-           
            return cell!
        }
        
