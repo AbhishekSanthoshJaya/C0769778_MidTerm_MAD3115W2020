@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
-        DataRepository.getInstance().loadData()
+        //DataRepository.getInstance().loadData()
     }
     
     private func addlogOutButton()
