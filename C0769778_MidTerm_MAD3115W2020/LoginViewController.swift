@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         let ud = UserDefaults.standard
         let name = ud.string(forKey:"name")
         let password = ud.string(forKey: "password")
+        self.navigationItem.hidesBackButton = true
         if let nm = name
         {
             txtName.text = nm
@@ -46,11 +47,10 @@ class LoginViewController: UIViewController {
         {
             if (txtName.text == i.userName && txtPassword.text == i.password)
             {
-                
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
                 navigationController?.pushViewController(customerListTableVC, animated: true)
-                
+
                 if swchRememberMe.isOn
                     {
                     let defaults = UserDefaults.standard
@@ -59,12 +59,10 @@ class LoginViewController: UIViewController {
                     }
                 return
             }
-        else
-            {
-          let alertController = UIAlertController(title: "Error", message: "Incorrect username/password", preferredStyle: .alert)
-          alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-          self.present(alertController, animated: true, completion: nil)
-            }
         }
+                let alertController = UIAlertController(title: "Error", message: "Incorrect username/password", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                      
     }
 }
