@@ -47,7 +47,6 @@ class SecondViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerVC") as! AddNewCustomerViewController
         navigationController?.pushViewController(addNewCustomerVC, animated: true)
-        //Replace with proper code
     }
     
     //CUSTOMER OBJECTS
@@ -62,16 +61,16 @@ class SecondViewController: UIViewController {
        }
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
        {
-        return DataRepository.getInstance().customerListStorage.count
+        return DataRepository.getInstance().customerDictionary.count
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
        {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
-           
-        let customer = DataRepository.getInstance().customerListStorage[indexPath.row]
+        let customerArray = DataRepository.getInstance().dictionaryToArray()
+        let customer = customerArray?[indexPath.row]
            //cell?.textLabel?.text = customer.customerId
-           cell?.textLabel?.text = customer.name
+           cell?.textLabel?.text = customer?.name
            //cell?.textLabel?.text = customer.email
            return cell!
        }

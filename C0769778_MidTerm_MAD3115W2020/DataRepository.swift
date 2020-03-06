@@ -17,6 +17,11 @@ lazy var customerListStorage: [Customer] = []
     
 private init(){
 }
+
+var c1 = (Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
+var c2 = (Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))
+var c3 = (Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com"))
+ 
     
 static func getInstance() -> DataRepository{
 return repoObj
@@ -27,12 +32,18 @@ func addCustomer(customer: Customer)
     let cid = customer.customerId
     customerDictionary.updateValue(customer, forKey: cid)
   }
-  
+
 func loadData(){
-        customerListStorage.removeAll()
-        customerListStorage.append(Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com"))
-        customerListStorage.append(Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com"))
-        customerListStorage.append(Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com"))
+       addCustomer(customer: c1)
+       addCustomer(customer: c2)
+       addCustomer(customer: c3)
+    }
+    
+func dictionaryToArray() -> [Customer]?{
+    for i in customerDictionary{
+        customerListStorage.append(i.value)
+     }
+    return customerListStorage
     }
 }
 
