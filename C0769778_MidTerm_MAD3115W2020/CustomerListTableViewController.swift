@@ -29,14 +29,16 @@ class CustomerListTableViewController: UIViewController {
     
     private func addlogOutButton()
     {
-        let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.goBack))
+        let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.logOut))
         
         self.navigationItem.leftBarButtonItem = logOutButton
     }
     
-    @objc func goBack()
+    @objc func logOut()
     {
-        self.navigationController?.popViewController(animated: true)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginViewController
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     //BUTTON TO ADD NEW CUSTOMER
