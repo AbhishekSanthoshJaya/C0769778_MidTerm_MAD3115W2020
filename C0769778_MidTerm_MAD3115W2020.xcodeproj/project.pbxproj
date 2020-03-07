@@ -18,6 +18,7 @@
 		9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */; };
 		9B880BA82412EDF900715485 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BA72412EDF900715485 /* Exceptions.swift */; };
 		9B880BD224131F0F00715485 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BD124131F0F00715485 /* ShowBillDetailsViewController.swift */; };
+		9B880BD4241328C900715485 /* DetailedCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BD3241328C900715485 /* DetailedCustomerViewController.swift */; };
 		9BBE15B224119E12003ECD32 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B124119E12003ECD32 /* Customer.swift */; };
 		9BBE15B424119F5E003ECD32 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B324119F5E003ECD32 /* DataRepository.swift */; };
 		9BBE15B72411B04B003ECD32 /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */; };
@@ -58,6 +59,7 @@
 		9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B880BA72412EDF900715485 /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		9B880BD124131F0F00715485 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
+		9B880BD3241328C900715485 /* DetailedCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCustomerViewController.swift; sourceTree = "<group>"; };
 		9BBE15B124119E12003ECD32 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9BBE15B324119F5E003ECD32 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				9B21FD4F241051C8006F7AED /* SceneDelegate.swift */,
 				9B21FD51241051C8006F7AED /* LoginViewController.swift */,
 				9B21FD53241051C8006F7AED /* Main.storyboard */,
+				9B880BD3241328C900715485 /* DetailedCustomerViewController.swift */,
 				9B880BD124131F0F00715485 /* ShowBillDetailsViewController.swift */,
 				9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */,
 				9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B880BD4241328C900715485 /* DetailedCustomerViewController.swift in Sources */,
 				9B880BD224131F0F00715485 /* ShowBillDetailsViewController.swift in Sources */,
 				9BBE15B72411B04B003ECD32 /* AddNewCustomerViewController.swift in Sources */,
 				9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */,

@@ -34,15 +34,16 @@ class ShowBillDetailsViewController: UITableViewController {
         return 0
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+//    {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
+//        let customerArray = [customers?.customerId, customers?.name, customers?.email]
+//        let detailedCustomer = customerArray[indexPath.row]
+//        //cell?.textLabel?.text = customer.customerId
+//        cell?.textLabel?.text = detailedCustomer.name
+//        //cell?.textLabel?.text = customer.email
+//        return cell!
+//    }
 
     /*
     // Override to support conditional editing of the table view.

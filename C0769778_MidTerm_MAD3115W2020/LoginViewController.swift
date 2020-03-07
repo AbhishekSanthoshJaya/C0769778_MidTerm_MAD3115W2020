@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swchRememberMe: UISwitch!
 
+    @IBAction func btnSignup(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerVC") as! AddNewCustomerViewController
+        navigationController?.pushViewController(addNewCustomerVC, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let ud = UserDefaults.standard

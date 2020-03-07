@@ -86,9 +86,9 @@ class CustomerListTableViewController: UIViewController {
         let selectedCustomer = customers[indexPath.row]
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as ShowBillDetailsViewController
-        showBillDetailsVC.customers = selectedCustomer
-        self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
+        let detailedCustomerVC = sb.instantiateViewController(identifier: "detailedCustomerVC") as DetailedCustomerViewController
+        detailedCustomerVC.customers = selectedCustomer
+        self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
     }
     }
 
