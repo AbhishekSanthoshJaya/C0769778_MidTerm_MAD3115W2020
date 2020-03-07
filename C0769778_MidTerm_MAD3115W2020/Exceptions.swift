@@ -28,9 +28,11 @@ static func email(email: String) -> Bool {
     return true
 }
     
-static func mobileNumber(number: String) throws {
+    static func mobileNumber(number: String) -> Bool {
     if number.count != 10 {
-        throw CustomerErrors.invalidNumber(number: number)
+        return false
+        //throw CustomerErrors.invalidNumber(number: number)
     }
+        return true
   }
 }
