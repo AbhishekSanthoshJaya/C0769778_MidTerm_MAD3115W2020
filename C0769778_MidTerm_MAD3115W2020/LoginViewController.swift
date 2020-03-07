@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        txtName.text = ""
+        txtPassword.text = ""
         let ud = UserDefaults.standard
         let name = ud.string(forKey:"name")
         let password = ud.string(forKey: "password")
@@ -64,6 +66,11 @@ class LoginViewController: UIViewController {
                     let name = defaults.set(txtName.text, forKey: "name")
                     let password = defaults.set(txtPassword.text, forKey: "password")
                     }
+                    
+                else{
+                    UserDefaults.standard.removeObject(forKey: "name")
+                    UserDefaults.standard.removeObject(forKey: "password")
+                }
                 return
             }
         }
