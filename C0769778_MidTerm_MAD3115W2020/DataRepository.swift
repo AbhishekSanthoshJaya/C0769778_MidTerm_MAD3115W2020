@@ -21,7 +21,8 @@ private init(){
 static func getInstance() -> DataRepository{
 return repoObj
     }
-
+    
+//--------- CUSTOMER OBJECTS ---------
 var c1 =  Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com", userName: "Aby", password: "aby123")
 var c2 =  Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com", userName: "Rana", password: "rana123")
 var c3 =  Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com", userName: "notraghav",password: "dontlookatthiscode")
