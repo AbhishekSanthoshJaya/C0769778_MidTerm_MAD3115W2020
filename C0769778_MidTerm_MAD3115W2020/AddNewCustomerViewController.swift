@@ -19,6 +19,15 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtNewCustomerUserName: UITextField!
     
     @IBAction func btnAddNewCustomer(_ sender: Any) {
+        if let txtmail = txtNewCustomerEmail.text {
+        if(Validations.email(email: txtmail) == false)
+            {
+                let alertController = UIAlertController(title:"Error", message: "Invalid email ID", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }
         var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
         DataRepository.getInstance().addCustomer(customer: c)
         let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)

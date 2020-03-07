@@ -18,12 +18,14 @@ enum CustomerErrors: Error
 struct Validations {
 private static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-static func email(email: String) throws {
+static func email(email: String) -> Bool {
     
     let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegex)
     if !emailPred.evaluate(with: email){
-        throw CustomerErrors.invalidEmail(email: email)
+        //throw CustomerErrors.invalidEmail(email: email)
+        return false
     }
+    return true
 }
     
 static func mobileNumber(number: String) throws {
