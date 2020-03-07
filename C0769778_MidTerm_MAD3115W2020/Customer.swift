@@ -12,10 +12,10 @@ import UIKit
 class Customer
 {
     var customerId: String
-    var name: String
+    var name: String?
     var email: String
     var userName: String
-    var password: String
+    var password: String?
     
     init(customerId: String, name: String, email: String, userName: String, password: String) {
         self.customerId = customerId
@@ -23,6 +23,12 @@ class Customer
         self.email = email
         self.userName = userName
         self.password = password
+    }
+    
+    init(customerId: String, userName: String, email: String) {
+        self.customerId = customerId
+        self.userName = userName
+        self.email = email
     }
     
 //    convenience init(customerId: String, name: String, email: String) {

@@ -74,12 +74,22 @@ class CustomerListTableViewController: UIViewController {
        {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
            let customerArray = DataRepository.getInstance().dictionaryToArray()
-           let customer = customerArray?[indexPath.row]
+           let customer = customerArray[indexPath.row]
            //cell?.textLabel?.text = customer.customerId
-           cell?.textLabel?.text = customer?.name
+           cell?.textLabel?.text = customer.name
            //cell?.textLabel?.text = customer.email
            return cell!
        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let customers = DataRepository.getInstance().dictionaryToArray()
+        let selectedCustomer = customers[indexPath.row]
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as ShowBillDetailsViewController
+        showBillDetailsVC.customers = selectedCustomer
+        self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
+    }
     }
 
     /*

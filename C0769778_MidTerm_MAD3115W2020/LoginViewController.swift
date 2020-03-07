@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
 
         let customers = DataRepository.getInstance().dictionaryToArray()
         
-        for i in customers!
+        for i in customers
         {
             if (txtName.text == i.userName && txtPassword.text == i.password)
             {

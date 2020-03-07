@@ -38,7 +38,7 @@ func loadData(){
        addCustomer(customer: c3)
     }
     
-func dictionaryToArray() -> [Customer]?{
+func dictionaryToArray() -> [Customer]{
     var customerListStorage: [Customer] = []
     for i in customerDictionary{
         customerListStorage.append(i.value)
