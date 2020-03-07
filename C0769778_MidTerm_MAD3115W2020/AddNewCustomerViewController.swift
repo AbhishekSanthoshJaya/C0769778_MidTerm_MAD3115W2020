@@ -21,7 +21,15 @@ class AddNewCustomerViewController: UIViewController {
     @IBAction func btnAddNewCustomer(_ sender: Any) {
         let txtNumber = txtNewCustomerNumber.text!
         let txtmail  = txtNewCustomerEmail.text!
-
+        
+        if(txtNewCustomerId.text == "" || txtNewCustomerUserName.text == "" || txtNewCustomerPassword.text == "")
+        {
+            let alertController = UIAlertController(title:"Error", message: "Invalid entry, fields left blank", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         if(Validations.email(email: txtmail) == false && Validations.mobileNumber(number: txtNumber) == false)
         {
             let alertController = UIAlertController(title:"Error", message: "Invalid email ID and phone number", preferredStyle: .alert)
