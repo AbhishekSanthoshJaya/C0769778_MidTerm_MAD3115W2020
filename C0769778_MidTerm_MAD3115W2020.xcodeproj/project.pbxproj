@@ -117,6 +117,14 @@
 				9B8F54EB24143B0300F43D7A /* Additional Classes */,
 				9B8F54E924143AC700F43D7A /* Util */,
 				9B21FD4D241051C8006F7AED /* AppDelegate.swift */,
+				9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */,
+				9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */,
+				9B880BD3241328C900715485 /* DetailedCustomerViewController.swift */,
+				9B880BD124131F0F00715485 /* ShowBillDetailsViewController.swift */,
+				9B880BA72412EDF900715485 /* Exceptions.swift */,
+				9BBE15B124119E12003ECD32 /* Customer.swift */,
+				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
+				9B21FD51241051C8006F7AED /* LoginViewController.swift */,
 				9B21FD4F241051C8006F7AED /* SceneDelegate.swift */,
 				9B21FD53241051C8006F7AED /* Main.storyboard */,
 				9B21FD56241051CA006F7AED /* Assets.xcassets */,
@@ -147,8 +155,6 @@
 		9B8F54E924143AC700F43D7A /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9BBE15B324119F5E003ECD32 /* DataRepository.swift */,
-				9B880BA72412EDF900715485 /* Exceptions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -156,7 +162,6 @@
 		9B8F54EB24143B0300F43D7A /* Additional Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9BBE15B124119E12003ECD32 /* Customer.swift */,
 			);
 			path = "Additional Classes";
 			sourceTree = "<group>";
@@ -164,11 +169,6 @@
 		9B8F54EC24143B2800F43D7A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B21FD51241051C8006F7AED /* LoginViewController.swift */,
-				9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */,
-				9B880BD3241328C900715485 /* DetailedCustomerViewController.swift */,
-				9B880BD124131F0F00715485 /* ShowBillDetailsViewController.swift */,
-				9BBE15B62411B04B003ECD32 /* AddNewCustomerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
