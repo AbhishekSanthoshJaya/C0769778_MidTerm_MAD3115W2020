@@ -19,8 +19,17 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtNewCustomerUserName: UITextField!
     
     @IBAction func btnAddNewCustomer(_ sender: Any) {
-        if let txtmail = txtNewCustomerEmail.text
+        let txtNumber = txtNewCustomerNumber.text!
+        let txtmail  = txtNewCustomerEmail.text!
+
+        if(Validations.email(email: txtmail) == false && Validations.mobileNumber(number: txtNumber) == false)
         {
+            let alertController = UIAlertController(title:"Error", message: "Invalid email ID and phone number", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         if(Validations.email(email: txtmail) == false)
             {
                 let alertController = UIAlertController(title:"Error", message: "Invalid email ID", preferredStyle: .alert)
@@ -28,19 +37,44 @@ class AddNewCustomerViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
                 return
             }
-        }
-        if let txtNumber = txtNewCustomerNumber.text
+        
+        if(Validations.mobileNumber(number: txtNumber) == false)
         {
-            if(Validations.mobileNumber(number: txtNumber) == false)
-            {
-                let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
+            let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            return
         }
-        let c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
+        var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
+//        let txtNumber = txtNewCustomerNumber.text!
+//        let txtEmail  = txtNewCustomerEmail.text!
+//        var c: Customer?
+//
+//            do {
+//            var c = try Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
+//            }
+//            catch CustomerErrors.invalidNumber(number: txtNumber){
+//                let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//                self.present(alertController, animated: true, completion: nil)
+//                return
+//            }
+//            catch CustomerErrors.invalidEmail(email: txtEmail){
+//                let alertController = UIAlertController(title:"Error", message: "Invalid Email Id", preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//                self.present(alertController, animated: true, completion: nil)
+//                return
+//            }
+//            catch {
+//                let alertController = UIAlertController(title:"Error", message: "Invalid number/email", preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//                self.present(alertController, animated: true, completion: nil)
+//                return
+//            }
+            
         DataRepository.getInstance().addCustomer(customer: c)
+        
+        
         let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
         self.present(alertController, animated: true, completion: nil)
