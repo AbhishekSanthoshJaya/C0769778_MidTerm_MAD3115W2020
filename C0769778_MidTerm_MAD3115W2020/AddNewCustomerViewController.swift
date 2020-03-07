@@ -28,6 +28,14 @@ class AddNewCustomerViewController: UIViewController {
                 return
             }
         }
+        if let txtNumber = txtNewCustomerNumber.text {
+            if(Validations.mobileNumber(number: txtNumber) == false){
+                let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }
         var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
         DataRepository.getInstance().addCustomer(customer: c)
         let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
