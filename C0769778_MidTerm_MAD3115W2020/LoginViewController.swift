@@ -63,8 +63,8 @@ class LoginViewController: UIViewController {
                 if swchRememberMe.isOn
                     {
                     let defaults = UserDefaults.standard
-                    let name = defaults.set(txtName.text, forKey: "name")
-                    let password = defaults.set(txtPassword.text, forKey: "password")
+                        _ = defaults.set(txtName.text, forKey: "name")
+                        _ = defaults.set(txtPassword.text, forKey: "password")
                     }
                     
                 else{

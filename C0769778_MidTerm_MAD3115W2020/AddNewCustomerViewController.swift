@@ -45,7 +45,7 @@ class AddNewCustomerViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             return
         }
-        var c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
+        let c = Customer(customerId: txtNewCustomerId.text!, name: txtNewCustomerName.text!, email: txtNewCustomerEmail.text!,userName: txtNewCustomerUserName.text!, password: txtNewCustomerPassword.text!)
 //        let txtNumber = txtNewCustomerNumber.text!
 //        let txtEmail  = txtNewCustomerEmail.text!
 //        var c: Customer?
