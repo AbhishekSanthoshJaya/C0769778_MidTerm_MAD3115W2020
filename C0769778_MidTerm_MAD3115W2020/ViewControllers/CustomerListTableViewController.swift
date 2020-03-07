@@ -26,11 +26,9 @@ class CustomerListTableViewController: UIViewController {
 //        <#code#>
 //    }
         
-    
     private func addlogOutButton()
     {
         let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.logOut))
-        
         self.navigationItem.leftBarButtonItem = logOutButton
     }
     
@@ -45,7 +43,6 @@ class CustomerListTableViewController: UIViewController {
     private func addNewCustomerButton()
     {
         let newCustomerButton = UIBarButtonItem(title: "New Customer", style: .plain, target: self, action: #selector(self.addCustomer))
-        
         self.navigationItem.rightBarButtonItem = newCustomerButton
     }
     
@@ -75,20 +72,18 @@ class CustomerListTableViewController: UIViewController {
            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
            let customerArray = DataRepository.getInstance().dictionaryToArray()
            let customer = customerArray[indexPath.row]
-           //cell?.textLabel?.text = customer.customerId
            cell?.textLabel?.text = customer.name
-           //cell?.textLabel?.text = customer.email
            return cell!
        }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let customers = DataRepository.getInstance().dictionaryToArray()
-        let selectedCustomer = customers[indexPath.row]
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let detailedCustomerVC = sb.instantiateViewController(identifier: "detailedCustomerVC") as DetailedCustomerViewController
-        detailedCustomerVC.customers = selectedCustomer
-        self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let customers = DataRepository.getInstance().dictionaryToArray()
+            let selectedCustomer = customers[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let detailedCustomerVC = sb.instantiateViewController(identifier: "detailedCustomerVC") as DetailedCustomerViewController
+            detailedCustomerVC.customers = selectedCustomer
+            self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
     }
     }
 

@@ -31,16 +31,16 @@ class DetailedCustomerViewController: UIViewController {
         navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedCustomerCell")
-        let objectDetailArray = [customers?.customerId, customers?.name, customers?.email]
-        let detailedCustomer = objectDetailArray[indexPath.row]
-        //cell?.textLabel?.text = customer.customerId
-        //cell?.textLabel?.text = detailedCustomer
-        //cell?.textLabel?.text = customer.email
-        return cell!
-    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+//    {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedCustomerCell")
+//        let objectDetailArray = [customers?.customerId, customers?.name, customers?.email]
+//        let detailedCustomer = objectDetailArray[indexPath.row]
+//        //cell?.textLabel?.text = customer.customerId
+//        //cell?.textLabel?.text = detailedCustomer
+//        //cell?.textLabel?.text = customer.email
+//        return cell!
+//    }
     
     /*
     // MARK: - Navigation

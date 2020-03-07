@@ -16,25 +16,27 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swchRememberMe: UISwitch!
 
-    @IBAction func btnSignup(_ sender: Any) {
+    @IBAction func btnSignup(_ sender: Any)
+    {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let addNewCustomerVC = sb.instantiateViewController(identifier: "AddNewCustomerVC") as! AddNewCustomerViewController
         navigationController?.pushViewController(addNewCustomerVC, animated: true)
     }
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         let ud = UserDefaults.standard
         let name = ud.string(forKey:"name")
         let password = ud.string(forKey: "password")
         self.navigationItem.hidesBackButton = true
         if let nm = name
-        {
-            txtName.text = nm
-        }
+            {
+                txtName.text = nm
+            }
         if let pw  = password
-        {
-            txtPassword.text = pw
-        }
+            {
+                txtPassword.text = pw
+            }
     }
     @IBAction func btnLogin(_ sender: Any)
     {

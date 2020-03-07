@@ -16,6 +16,8 @@ class Customer
     var email: String
     var userName: String
     var password: String?
+    var location: String?
+    var dateofBirth: String?
     
     init(customerId: String, name: String, email: String, userName: String, password: String) {
         self.customerId = customerId
@@ -23,12 +25,16 @@ class Customer
         self.email = email
         self.userName = userName
         self.password = password
+        
     }
     
-    init(customerId: String, userName: String, email: String) {
+    init(customerId: String, userName: String, email: String, location: String, dateOfBirth: String) {
         self.customerId = customerId
         self.userName = userName
         self.email = email
+        self.location = location
+        self.dateofBirth = dateOfBirth
+        
     }
     
 //    convenience init(customerId: String, name: String, email: String) {
