@@ -12,6 +12,7 @@ class DetailedCustomerViewController: UIViewController {
     var customers: Customer?
     @IBOutlet weak var lblCustomerId: UILabel!
     
+    @IBOutlet weak var imgViewBills: UIImageView!
     @IBOutlet weak var lblCustomerEmail: UILabel!
     @IBOutlet weak var lblCustomerName: UILabel!
     override func viewDidLoad() {
@@ -20,6 +21,14 @@ class DetailedCustomerViewController: UIViewController {
         self.lblCustomerName.text = customers?.name
         self.lblCustomerEmail.text = customers?.email
         self.title = "DETAILED CUSTOMER VIEW"
+        imgViewBills.isUserInteractionEnabled = true
+        imgViewBills.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
+    }
+    
+    @objc func imageTap() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
+        navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
