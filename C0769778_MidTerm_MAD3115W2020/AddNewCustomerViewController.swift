@@ -91,9 +91,10 @@ class AddNewCustomerViewController: UIViewController {
     }
         func dismissView()
         {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
-            navigationController?.pushViewController(customerListTableVC, animated: true)
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+//            navigationController?.pushViewController(customerListTableVC, animated: true)
+            navigationController?.popViewController(animated: true)
         }
         override func viewDidLoad() {
         super.viewDidLoad()

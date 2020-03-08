@@ -22,9 +22,9 @@ class CustomerListTableViewController: UIViewController {
         //DataRepository.getInstance().loadData()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        <#code#>
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tblViewCustomerList.reloadData()
+    }
         
     private func addlogOutButton()
     {
@@ -84,7 +84,7 @@ class CustomerListTableViewController: UIViewController {
             let detailedCustomerVC = sb.instantiateViewController(identifier: "detailedCustomerVC") as DetailedCustomerViewController
             detailedCustomerVC.customers = selectedCustomer
             self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
-    }
+        }
     }
 
     /*
