@@ -12,6 +12,9 @@ class DetailedCustomerViewController: UIViewController {
     var customers: Customer?
     @IBOutlet weak var lblCustomerId: UILabel!
     
+    @IBOutlet weak var lblCustomerLocation: UILabel!
+    @IBOutlet weak var lblCustomerUsername: UILabel!
+    @IBOutlet weak var lblCustomerdob: UILabel!
     @IBOutlet weak var imgViewBills: UIImageView!
     @IBOutlet weak var lblCustomerEmail: UILabel!
     @IBOutlet weak var lblCustomerName: UILabel!
@@ -20,6 +23,9 @@ class DetailedCustomerViewController: UIViewController {
         self.lblCustomerId.text = customers?.customerId
         self.lblCustomerName.text = customers?.name
         self.lblCustomerEmail.text = customers?.email
+        self.lblCustomerLocation.text = customers?.location
+        self.lblCustomerdob.text = customers?.dateOfBirth
+        self.lblCustomerUsername.text = customers?.userName
         self.title = "DETAILED CUSTOMER VIEW"
         imgViewBills.isUserInteractionEnabled = true
         imgViewBills.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))

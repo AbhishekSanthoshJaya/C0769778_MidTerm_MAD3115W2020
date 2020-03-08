@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class DataRepository {
    
 static private var repoObj = DataRepository()
@@ -23,9 +24,6 @@ return repoObj
     }
     
 //--------- CUSTOMER OBJECTS ---------
-var c1 =  Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com", userName: "Aby", password: "aby123")
-var c2 =  Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com", userName: "Rana", password: "rana123")
-var c3 =  Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com", userName: "notraghav",password: "dontlookatthiscode")
     
 func addCustomer(customer: Customer)
   {
@@ -34,6 +32,11 @@ func addCustomer(customer: Customer)
   }
 
 func loadData(){
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd"
+    let c1 =  Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "abhisheksj35@gmail.com", userName: "Aby", password: "aby123", location: "India", dateOfBirth: "1995/04/18")
+    let c2 =  Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com", userName: "Rana", password: "rana123", location: "Nepal", dateOfBirth: "1995/04/18")
+    let c3 =  Customer(customerId: "A003", name: "NotRaghav", email: "something@gmail.com", userName: "notraghav",password: "dontlookatthiscode", location: "Toronto", dateOfBirth: "1995/07/22")
        addCustomer(customer: c1)
        addCustomer(customer: c2)
        addCustomer(customer: c3)
