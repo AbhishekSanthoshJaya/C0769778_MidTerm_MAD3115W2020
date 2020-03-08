@@ -26,7 +26,6 @@ class DetailedCustomerViewController: UIViewController {
         self.lblCustomerLocation.text = customers?.location
         self.lblCustomerdob.text = customers?.dateOfBirth
         self.lblCustomerUsername.text = customers?.userName
-        self.title = "DETAILED CUSTOMER VIEW"
         imgViewBills.isUserInteractionEnabled = true
         imgViewBills.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
     }
