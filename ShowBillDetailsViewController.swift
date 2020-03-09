@@ -49,7 +49,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         
         let objectDetailArray = [customerBill?.customerId, customerBill?.name, customerBill?.email]
         
-        cell?.textLabel?.text = customerBill.
+        //cell?.textLabel?.text = customerBill.
         return cell!
     }
      

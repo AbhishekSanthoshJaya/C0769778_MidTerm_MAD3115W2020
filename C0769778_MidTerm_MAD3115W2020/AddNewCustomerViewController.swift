@@ -18,6 +18,7 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtNewCustomerPassword: UITextField!
     @IBOutlet weak var txtNewCustomerUserName: UITextField!
     
+    @IBOutlet weak var dtPickerDOB: UIDatePicker!
     @IBOutlet weak var txtNewCustomerDoB: UITextField!
     @IBOutlet weak var txtNewCustomerLocation: UITextField!
     @IBAction func btnAddNewCustomer(_ sender: Any) {
@@ -98,6 +99,11 @@ class AddNewCustomerViewController: UIViewController {
         }
         override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    @IBAction func dtPickerChanged(_ sender: UIDatePicker) {
+        
     }
     
 
