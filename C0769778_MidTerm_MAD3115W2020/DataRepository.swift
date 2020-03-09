@@ -37,6 +37,8 @@ func loadData(){
     let c1 =  Customer(customerId: "A001", name: "Abhishek Santhosh Jaya", email: "aby35@gmail.com", userName: "Aby", password: "aby123", location: "India", dateOfBirth: "1995/04/18")
     let c2 =  Customer(customerId: "A002", name: "Prakash Rana", email: "Rana@gmail.com", userName: "Rana", password: "rana123", location: "Nepal", dateOfBirth: "1995/04/18")
     let c3 =  Customer(customerId: "A003", name: "Raghav", email: "something@gmail.com", userName: "notraghav",password: "raghav123", location: "Toronto", dateOfBirth: "1995/07/22")
+    let m1 =  Mobile(billId: "MB100", billDate: formatter.date(from: "2019/10/12")!, billType: BillType.MOBILE, manufacturerName: "APPLE INC.", planName: "Student Plan", mobileNumber: "4379077578", mobGbUsed: 1, minute: 6)
+    c1.newBill(bill: m1, billId: "MB100")
        addCustomer(customer: c1)
        addCustomer(customer: c2)
        addCustomer(customer: c3)

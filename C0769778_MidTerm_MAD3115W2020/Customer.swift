@@ -18,6 +18,8 @@ class Customer
     var password: String?
     var location: String?
     var dateOfBirth: String?
+    lazy var customerBills = [String: Bill]()
+    var allTotal: Double = 0.0
     
     init(customerId: String, name: String, email: String, userName: String, password: String, location: String, dateOfBirth: String) {
         self.customerId = customerId
@@ -30,6 +32,19 @@ class Customer
         
     }
     
+    func newBill(bill: Bill, billId: String)
+        {
+          customerBills.updateValue(bill, forKey: billId)
+        }
+    
+    func allBillsTotal() -> Double
+    {
+      var allTotal2 = 0.0
+      for i in customerBills{
+        allTotal2 += i.value.billTotal
+      }
+      return allTotal2
+    }
 //    init(customerId: String, userName: String, email: String, location: String, dateOfBirth: Date) {
 //        self.customerId = customerId
 //        self.userName = userName
