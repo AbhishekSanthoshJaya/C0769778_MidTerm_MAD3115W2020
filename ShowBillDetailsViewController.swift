@@ -15,6 +15,7 @@ class ShowBillDetailsViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
         self.bills = customerBill!.getBills()
+        self.title = "CUSTOMER BILLS"
     }
     
 
@@ -45,15 +46,24 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell") as! BillTableViewCell
         let billList = bills[indexPath.row]
+        if billList.billId.contains("M"){
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"mobileicon")
         //cell.lblbillType?.text = billList.MOBILE
+            cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
+        }
+        if billList.billId.contains("HY")
+        {
+        cell.lblbillId?.text = billList.billId
+        cell.lblbillDate?.text = billList.billDate.getFormattedDate()
+        cell.imgBillicon.image = UIImage(named:"hydroicon")
         cell.backgroundColor = UIColor(displayP3Red: 0.91, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(200.0)
+        return CGFloat(150.0)
     }
      
 //     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

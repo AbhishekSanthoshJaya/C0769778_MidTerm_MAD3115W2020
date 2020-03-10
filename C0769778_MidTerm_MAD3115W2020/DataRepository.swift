@@ -43,9 +43,9 @@ func loadData(){
     let h2 = Hydro(billId: "HY200", billDate: formatter.date(from: "2019/05/15")!, billType: BillType.HYDRO, agencyName: "LIFELINE", unitsUsed: 8.2)
     
        c1.newBill(bill: m1, billId: "MB100")
-       c2.newBill(bill: m2, billId: "MB200")
+       c2.newBill(bill: h2, billId: "HY200")
        c3.newBill(bill: h1, billId: "HY100")
-       c3.newBill(bill: h2, billId: "HY200")
+       c3.newBill(bill: m2, billId: "MB200")
        addCustomer(customer: c1)
        addCustomer(customer: c2)
        addCustomer(customer: c3)
