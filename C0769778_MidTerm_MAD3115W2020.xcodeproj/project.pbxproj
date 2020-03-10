@@ -16,6 +16,7 @@
 		9B21FD65241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD64241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020Tests.swift */; };
 		9B21FD70241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD6F241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift */; };
 		9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */; };
+		9B2C5EFB241824B6000EA1A2 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C5EFA241824B6000EA1A2 /* BillTableViewCell.swift */; };
 		9B5B5B312414670800D568E6 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B5B302414670800D568E6 /* Extension+Date.swift */; };
 		9B79A2032416D788002FB908 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79A2022416D788002FB908 /* ShowBillDetailsViewController.swift */; };
 		9B880BA82412EDF900715485 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BA72412EDF900715485 /* Exceptions.swift */; };
@@ -63,6 +64,7 @@
 		9B21FD6F241051CA006F7AED /* C0769778_MidTerm_MAD3115W2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C0769778_MidTerm_MAD3115W2020UITests.swift; sourceTree = "<group>"; };
 		9B21FD71241051CA006F7AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
+		9B2C5EFA241824B6000EA1A2 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		9B5B5B302414670800D568E6 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		9B79A2022416D788002FB908 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShowBillDetailsViewController.swift; path = ../ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		9B880BA72412EDF900715485 /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				9B880BA72412EDF900715485 /* Exceptions.swift */,
 				9B21FD51241051C8006F7AED /* LoginViewController.swift */,
 				9B21FD4F241051C8006F7AED /* SceneDelegate.swift */,
+				9B2C5EFA241824B6000EA1A2 /* BillTableViewCell.swift */,
 				9B21FD53241051C8006F7AED /* Main.storyboard */,
 				9B21FD56241051CA006F7AED /* Assets.xcassets */,
 				9B21FD58241051CA006F7AED /* LaunchScreen.storyboard */,
@@ -325,6 +328,7 @@
 				9B79A2032416D788002FB908 /* ShowBillDetailsViewController.swift in Sources */,
 				9B880BD4241328C900715485 /* DetailedCustomerViewController.swift in Sources */,
 				9BCF67532414562F00886E59 /* Bill.swift in Sources */,
+				9B2C5EFB241824B6000EA1A2 /* BillTableViewCell.swift in Sources */,
 				9BCF67572414589E00886E59 /* Hydro.swift in Sources */,
 				9BCF6755241456BE00886E59 /* Mobile.swift in Sources */,
 				9BE2A7D1241716BE0083D83F /* Extension+UITextField.swift in Sources */,

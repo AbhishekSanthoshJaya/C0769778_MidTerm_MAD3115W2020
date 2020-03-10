@@ -43,10 +43,16 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell") as! BillTableViewCell
         let billList = bills[indexPath.row]
-        cell?.textLabel?.text = billList.billId
-        return cell!
+        cell.lblbillId?.text = billList.billId
+        //cell.lblbillDate?.text = billList.billDate
+        cell.imgBillicon.image = UIImage(named:"mobileicon")
+        //cell.lblbillType?.text = billList.MOBILE
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100.0)
     }
      
 //     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -17,8 +17,8 @@ public class Bill
     
 {
   var billId: String
-  private var billDate: Date
-  private var billType: BillType
+  var billDate: Date
+  var billType: BillType
   var billTotal: Double = 0.0
 
 init(billId: String, billDate: Date, billType: BillType)
