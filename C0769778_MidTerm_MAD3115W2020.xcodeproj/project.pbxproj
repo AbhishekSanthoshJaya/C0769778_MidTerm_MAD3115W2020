@@ -27,6 +27,7 @@
 		9BCF6755241456BE00886E59 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF6754241456BE00886E59 /* Mobile.swift */; };
 		9BCF67572414589E00886E59 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF67562414589E00886E59 /* Hydro.swift */; };
 		9BCF6759241458FE00886E59 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCF6758241458FE00886E59 /* Internet.swift */; };
+		9BE2A7D1241716BE0083D83F /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2A7D0241716BE0083D83F /* Extension+UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		9BCF6754241456BE00886E59 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		9BCF67562414589E00886E59 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		9BCF6758241458FE00886E59 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		9BE2A7D0241716BE0083D83F /* Extension+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				9B21FD58241051CA006F7AED /* LaunchScreen.storyboard */,
 				9B21FD5B241051CA006F7AED /* Info.plist */,
 				9B5B5B302414670800D568E6 /* Extension+Date.swift */,
+				9BE2A7D0241716BE0083D83F /* Extension+UITextField.swift */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				9BCF67532414562F00886E59 /* Bill.swift in Sources */,
 				9BCF67572414589E00886E59 /* Hydro.swift in Sources */,
 				9BCF6755241456BE00886E59 /* Mobile.swift in Sources */,
+				9BE2A7D1241716BE0083D83F /* Extension+UITextField.swift in Sources */,
 				9BBE15B72411B04B003ECD32 /* AddNewCustomerViewController.swift in Sources */,
 				9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */,
 				9BBE15B224119E12003ECD32 /* Customer.swift in Sources */,

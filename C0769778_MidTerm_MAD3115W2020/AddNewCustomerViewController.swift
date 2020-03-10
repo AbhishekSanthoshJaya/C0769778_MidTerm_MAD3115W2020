@@ -99,8 +99,17 @@ class AddNewCustomerViewController: UIViewController {
         }
         override func viewDidLoad() {
         super.viewDidLoad()
+            self.txtNewCustomerDoB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
     }
     
+    @objc func tapDone() {
+        if let datePicker = self.txtNewCustomerDoB.inputView as? UIDatePicker { // 2-1
+            let dateformatter = DateFormatter() // 2-2
+            dateformatter.dateStyle = .medium // 2-3
+            self.txtNewCustomerDoB.text = dateformatter.string(from: datePicker.date) //2-4
+        }
+        self.txtNewCustomerDoB.resignFirstResponder() // 2-5
+    }
     
     @IBAction func dtPickerChanged(_ sender: UIDatePicker) {
         
