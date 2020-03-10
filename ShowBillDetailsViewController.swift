@@ -46,11 +46,11 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillTableViewCell") as! BillTableViewCell
         let billList = bills[indexPath.row]
-        if billList.billId.contains("M"){
+        if billList.billId.contains("MB"){
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"mobileicon")
-        //cell.lblbillType?.text = billList.MOBILE
+        //cell.lblbillType?.text = 
             cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
         }
         if billList.billId.contains("HY")
