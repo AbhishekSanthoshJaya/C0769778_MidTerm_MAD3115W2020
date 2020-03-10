@@ -11,6 +11,9 @@ import UIKit
 class ShowBillDetailsViewController: UIViewController {
     var customerBill: Customer?
     var bills = [Bill]()
+//    var mobBills = [Mobile]()
+//    var hydBills = [Hydro]()
+//    var intBills = [Internet]()
     @IBOutlet weak var tblBillDetails: UITableView!
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,8 +53,9 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"mobileicon")
-        //cell.lblbillType?.text = 
-            cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
+     //       cell.lblAgency.text = 
+            //cell.lblbillType?.text = 
+        cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
         }
         if billList.billId.contains("HY")
         {
@@ -65,7 +69,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"interneticon")
-            cell.backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
+        cell.backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
         }
         return cell
     }

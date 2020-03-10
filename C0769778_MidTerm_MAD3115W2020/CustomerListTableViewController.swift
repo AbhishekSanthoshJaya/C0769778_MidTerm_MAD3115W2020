@@ -19,7 +19,6 @@ class CustomerListTableViewController: UIViewController {
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
-        //DataRepository.getInstance().loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +52,6 @@ class CustomerListTableViewController: UIViewController {
         navigationController?.pushViewController(addNewCustomerVC, animated: true)
     }
     
-    //CUSTOMER OBJECTS
 
 }
    extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate

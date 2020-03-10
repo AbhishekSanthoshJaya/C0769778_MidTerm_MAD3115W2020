@@ -13,8 +13,9 @@ class BillTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imgBillicon: UIImageView!
     @IBOutlet weak var lblbillId: UILabel!
-    @IBOutlet weak var lblbillType: UILabel!
     @IBOutlet weak var lblbillDate: UILabel!
+    @IBOutlet weak var lblAgency: UILabel!
+    @IBOutlet weak var lblUsage: UILabel!
     @IBOutlet weak var billAmount: UILabel!
     
     override func awakeFromNib() {
