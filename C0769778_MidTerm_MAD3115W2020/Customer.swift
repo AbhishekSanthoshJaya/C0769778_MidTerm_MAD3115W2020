@@ -45,6 +45,14 @@ class Customer
       }
       return allTotal2
     }
+    
+    func getBills() -> [Bill]{
+        var bills = [Bill]()
+        for i in customerBills{
+            bills.append(i.value)
+        }
+        return bills
+    }
 //    init(customerId: String, userName: String, email: String, location: String, dateOfBirth: Date) {
 //        self.customerId = customerId
 //        self.userName = userName

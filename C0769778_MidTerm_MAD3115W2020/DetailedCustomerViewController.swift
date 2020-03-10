@@ -33,6 +33,7 @@ class DetailedCustomerViewController: UIViewController {
     @objc func imageTap() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
+        showBillDetailsVC.customerBill = self.customers
         navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
     

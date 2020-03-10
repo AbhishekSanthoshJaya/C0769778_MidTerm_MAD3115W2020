@@ -441,6 +441,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gkt-sB-JZk" id="Z6D-42-o9b"/>
+                                    <outlet property="delegate" destination="gkt-sB-JZk" id="p84-Yc-Alv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

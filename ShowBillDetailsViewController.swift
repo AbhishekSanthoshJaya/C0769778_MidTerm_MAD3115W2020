@@ -10,11 +10,11 @@ import UIKit
 
 class ShowBillDetailsViewController: UIViewController {
     var customerBill: Customer?
+    var bills = [Bill]()
     @IBOutlet weak var tblBillDetails: UITableView!
     override func viewDidLoad() {
     super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.bills = customerBill!.getBills()
     }
     
 
@@ -38,18 +38,14 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-     return DataRepository.getInstance().customerDictionary.count
+        return self.bills.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail")
-        let customerArray = DataRepository.getInstance().dictionaryToArray()
-        let customer = customerArray[indexPath.row]
-        
-        let objectDetailArray = [customerBill?.customerId, customerBill?.name, customerBill?.email]
-        
-        //cell?.textLabel?.text = customerBill.
+        let billList = bills[indexPath.row]
+        cell?.textLabel?.text = billList.billId
         return cell!
     }
      
