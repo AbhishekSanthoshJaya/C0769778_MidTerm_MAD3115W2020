@@ -13,12 +13,14 @@ class AddNewBillViewController: UIViewController {
     var internetBills = [Internet]()
     var hydroBills = [Hydro]()
     
-    
+    @IBOutlet weak var txtBillId: UITextField!
+    @IBOutlet weak var txtBillDate: UITextField!
+    @IBOutlet weak var txtBillType: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
