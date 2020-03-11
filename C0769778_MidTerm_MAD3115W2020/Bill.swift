@@ -27,4 +27,10 @@ init(billId: String, billDate: Date, billType: BillType)
     self.billType = billType
     self.billDate = billDate
     }
+    
+func billCalculate() -> Double
+ {
+var dummybillAmount = 0.0
+    return dummybillAmount
+ }
 }

@@ -60,6 +60,7 @@ func dictionaryToArray() -> [Customer]{
      }
     return customerListStorage
     }
+    
 }
 
 

@@ -23,7 +23,7 @@ init(billId: String, billDate: Date, billType: BillType, providerName:String, gb
   }
 
 //------- METHOD TO CALCULATE TOTAL INTERNET BILL -------
-func billCalculate() -> Double{
+override func billCalculate() -> Double{
        var billAmount = 0.0
     if( gbUsed < 10){
         billAmount = 3 * gbUsed

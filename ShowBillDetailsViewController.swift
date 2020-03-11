@@ -53,8 +53,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"mobileicon")
-     //       cell.lblAgency.text = 
-            //cell.lblbillType?.text = 
+        cell.billAmount.text = String(format:"$%.2f", billList.billCalculate())
         cell.backgroundColor = UIColor(displayP3Red: 0.98, green: 0.91, blue: 0.71, alpha: 1.0)
         }
         if billList.billId.contains("HY")
@@ -62,6 +61,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"hydroicon")
+        cell.billAmount.text = String(format:"$%.2f", billList.billCalculate())
         cell.backgroundColor = UIColor(displayP3Red: 0.91, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         if billList.billId.contains("IN")
@@ -69,6 +69,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         cell.lblbillId?.text = billList.billId
         cell.lblbillDate?.text = billList.billDate.getFormattedDate()
         cell.imgBillicon.image = UIImage(named:"interneticon")
+        cell.billAmount.text = String(format:"$%.2f", billList.billCalculate())
         cell.backgroundColor = UIColor(displayP3Red: 0.9, green: 0.9, blue: 0.98, alpha: 1.0)
         }
         return cell

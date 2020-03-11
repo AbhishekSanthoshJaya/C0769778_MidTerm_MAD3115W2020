@@ -28,7 +28,7 @@ class Mobile: Bill {
   }
 
 //------- METHOD TO CALCULATE TOTAL MOBILE BILL -------
-func billCalculate() -> Double
+override func billCalculate() -> Double
     {
     var billAmount = 0.0
     billAmount = (Double(self.mobGbUsed) * 25) + (Double(self.minute) * 0.2)
