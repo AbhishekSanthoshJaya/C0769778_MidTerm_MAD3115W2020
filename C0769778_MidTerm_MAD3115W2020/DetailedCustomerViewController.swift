@@ -20,6 +20,7 @@ class DetailedCustomerViewController: UIViewController {
     @IBOutlet weak var lblCustomerName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "CUSTOMER DETAILS"
         self.lblCustomerId.text = customers?.customerId
         self.lblCustomerName.text = customers?.name
         self.lblCustomerEmail.text = customers?.email
@@ -27,7 +28,7 @@ class DetailedCustomerViewController: UIViewController {
         self.lblCustomerdob.text = customers?.dateOfBirth
         self.lblCustomerUsername.text = customers?.userName
         imgViewBills.isUserInteractionEnabled = true
-        imgViewBills.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
+    imgViewBills.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
     }
     
     @objc func imageTap() {

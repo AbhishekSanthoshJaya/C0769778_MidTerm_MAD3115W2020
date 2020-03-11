@@ -18,6 +18,9 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var lblUsage: UILabel!
     @IBOutlet weak var billAmount: UILabel!
     
+    func setData(){
+     
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

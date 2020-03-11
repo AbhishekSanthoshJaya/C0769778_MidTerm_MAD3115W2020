@@ -16,6 +16,8 @@ class ShowBillDetailsViewController: UIViewController {
 //    var intBills = [Internet]()
     @IBOutlet weak var lblAllAmount: UILabel!
     @IBOutlet weak var tblBillDetails: UITableView!
+    
+    @IBOutlet weak var lblBackground: UILabel!
     override func viewDidLoad() {
     super.viewDidLoad()
         self.bills = customerBill!.getBills()
@@ -24,6 +26,7 @@ class ShowBillDetailsViewController: UIViewController {
         lblAllAmount.font = lblAllAmount.font.withSize(40.0)
         lblAllAmount.textAlignment = .center
         self.addNewBillButton()
+        lblBackground.backgroundColor = UIColor .red;
     }
     
     private func addNewBillButton()

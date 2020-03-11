@@ -16,6 +16,7 @@ class CustomerListTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "CUSTOMER LIST"
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true

@@ -50,6 +50,7 @@ func loadData(){
        c3.newBill(bill: in1, billId: "IN100")
        c3.newBill(bill: m1, billId: "MB100")
        c3.newBill(bill: h2, billId: "HY200")
+       c3.newBill(bill: in2, billId: "IN200")
        addCustomer(customer: c1)
        addCustomer(customer: c2)
        addCustomer(customer: c3)

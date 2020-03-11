@@ -99,6 +99,7 @@ class AddNewCustomerViewController: UIViewController {
         }
         override func viewDidLoad() {
         super.viewDidLoad()
+            self.title = "NEW CUSTOMER"
             self.txtNewCustomerDoB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
     }
     
