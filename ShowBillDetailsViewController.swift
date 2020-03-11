@@ -14,11 +14,15 @@ class ShowBillDetailsViewController: UIViewController {
 //    var mobBills = [Mobile]()
 //    var hydBills = [Hydro]()
 //    var intBills = [Internet]()
+    @IBOutlet weak var lblAllAmount: UILabel!
     @IBOutlet weak var tblBillDetails: UITableView!
     override func viewDidLoad() {
     super.viewDidLoad()
         self.bills = customerBill!.getBills()
         self.title = "CUSTOMER BILLS"
+        self.lblAllAmount.text = String(format:"$%.2f", (customerBill?.allBillsTotal())!)
+        lblAllAmount.font = lblAllAmount.font.withSize(40.0)
+        lblAllAmount.textAlignment = .center
     }
     
 
@@ -77,6 +81,7 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(150.0)
     }
+    //func tableViewfooter
      
 //     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //         let customers = DataRepository.getInstance().dictionaryToArray()
