@@ -23,9 +23,21 @@ class ShowBillDetailsViewController: UIViewController {
         self.lblAllAmount.text = String(format:"$%.2f", (customerBill?.allBillsTotal())!)
         lblAllAmount.font = lblAllAmount.font.withSize(40.0)
         lblAllAmount.textAlignment = .center
+        self.addNewBillButton()
     }
     
-
+    private func addNewBillButton()
+    {
+        let newCustomerButton = UIBarButtonItem(title: "New Bill", style: .plain, target: self, action: #selector(self.addNewBill))
+        self.navigationItem.rightBarButtonItem = newCustomerButton
+    }
+    
+    @objc func addNewBill()
+    {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let addNewBillVC = sb.instantiateViewController(identifier: "addNewBillVC") as! AddNewBillViewController
+        navigationController?.pushViewController(addNewBillVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 
