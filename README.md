@@ -23,3 +23,4 @@ Mid term test: A program that calculates the total bills of a customer. A bill c
 * [Learnappmaking.com](https://learnappmaking.com/table-view-controller-uitableviewcontroller-how-to/) - Working with tables
 * [Stackoverflow.com](https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift) - Used in email validation
 * [Stackoverflow.com](https://stackoverflow.com/questions/50236308/is-is-possible-to-click-an-imageview-and-open-a-new-view-controller) - Clicking on an image to move to a new view controller
+* [Swiftdevcenter.com](https://www.swiftdevcenter.com/uidatepicker-as-input-view-to-uitextfield-swift/) - Adding datepicker as textfield input
