@@ -20,6 +20,13 @@ class AddNewBillViewController: UIViewController
     @IBOutlet weak var txtBillType: UITextField!
     @IBOutlet weak var segmentBilltype: UISegmentedControl!
     
+    @IBOutlet weak var txtHydUnits: UITextField!
+    @IBOutlet weak var txtHydAgency: UITextField!
+    @IBOutlet weak var txtMobMins: UITextField!
+    @IBOutlet weak var txtMobData: UITextField!
+    @IBOutlet weak var txtMobNumber: UITextField!
+    @IBOutlet weak var txtMobPlan: UITextField!
+    @IBOutlet weak var txtMobManufacturer: UITextField!
     var currentSlected: Int = 0
     var datePicker : UIDatePicker!
     var myPickerView : UIPickerView!
@@ -27,9 +34,29 @@ class AddNewBillViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        
+        self.txtBillDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        self.txtHydUnits.isHidden = true;
+        self.txtHydAgency.isHidden = true;
         // Do any additional setup after loading the view.
     }
+    @objc func tapDone() {
+        if let datePicker = self.txtBillDate.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = .medium
+            self.txtBillDate.text = dateformatter.string(from: datePicker.date)
+        }
+        self.txtBillDate.resignFirstResponder() 
+    }
+    
+    
+    @IBAction func segBill(_ sender: Any) {
+        if (segmentBilltype.selectedSegmentIndex == 0) {
+            self.txtHydUnits.isHidden = true;
+            self.txtHydAgency.isHidden = true;
+            let m = Mobile(billId: txtBillId!, billDate: txtBillDate, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer!, planName: txtMobPlan!, mobileNumber: txtMobNumber!, mobGbUsed: txtMobData!, minute: txtMobMins!)
+        }
+    }
+    
 //    func pickUp(_ textField : UITextField){
 //
 //    // UIPickerView

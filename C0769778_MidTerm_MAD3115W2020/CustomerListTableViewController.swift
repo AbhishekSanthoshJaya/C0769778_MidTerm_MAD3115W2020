@@ -12,33 +12,19 @@ class CustomerListTableViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
     @IBOutlet weak var tblViewCustomerList: UITableView!
-    var searchController: UISearchController!
-    var originalCustomers = DataRepository.getInstance().dictionaryToArray()
-    var filteredCustomers = DataRepository.getInstance().dictionaryToArray()
+   // var searchController: UISearchController!
+    //var originalCustomers = DataRepository.getInstance().dictionaryToArray()
+    //var filteredCustomers = DataRepository.getInstance().dictionaryToArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupSearchBar()
+        //self.setupSearchBar()
         self.title = "CUSTOMER LIST"
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
     }
     
-    private func setupSearchBar()
-    {
-        //Initialize SearchView
-        self.searchController = UISearchController(searchResultsController: nil)
-        
-        //Add Search Bar to header
-        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
-        searchController.hidesNavigationBarDuringPresentation = true
-        searchController.dimsBackgroundDuringPresentation = false
-        
-        //Set search bar on tableview
-        tblViewCustomerList.tableHeaderView = searchController.searchBar
-        
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tblViewCustomerList.reloadData()
@@ -118,30 +104,4 @@ class CustomerListTableViewController: UIViewController {
     }
     */
 
-extension CustomerListTableViewController: UISearchBarDelegate{
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-    }
 
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-    }
-}
-
- //3 - Confirm UISearchResultsUpdating Protocol
-extension CustomerListTableViewController: UISearchResultsUpdating{
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            filteredCustomers = originalCustomers.filter { customers in
-                return customers.lowercased().contains(searchText.lowercased())
-            }
-            
-        } else {
-            filteredCustomers = originalCustomers
-        }
-        tblViewCustomerList.reloadData()
-    }
-
-}

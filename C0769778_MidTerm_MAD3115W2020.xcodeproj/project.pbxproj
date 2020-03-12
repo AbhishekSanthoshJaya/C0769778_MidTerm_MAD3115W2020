@@ -18,6 +18,7 @@
 		9B21FD8524105F3B006F7AED /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */; };
 		9B2C5EFB241824B6000EA1A2 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C5EFA241824B6000EA1A2 /* BillTableViewCell.swift */; };
 		9B3087142419842A0082D64B /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3087132419842A0082D64B /* AddNewBillViewController.swift */; };
+		9B412CAC241AC11D0078812E /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B412CAB241AC11D0078812E /* Extension+String.swift */; };
 		9B5B5B312414670800D568E6 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B5B302414670800D568E6 /* Extension+Date.swift */; };
 		9B79A2032416D788002FB908 /* ShowBillDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B79A2022416D788002FB908 /* ShowBillDetailsViewController.swift */; };
 		9B880BA82412EDF900715485 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B880BA72412EDF900715485 /* Exceptions.swift */; };
@@ -67,6 +68,7 @@
 		9B21FD8424105F3B006F7AED /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B2C5EFA241824B6000EA1A2 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		9B3087132419842A0082D64B /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
+		9B412CAB241AC11D0078812E /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		9B5B5B302414670800D568E6 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		9B79A2022416D788002FB908 /* ShowBillDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShowBillDetailsViewController.swift; path = ../ShowBillDetailsViewController.swift; sourceTree = "<group>"; };
 		9B880BA72412EDF900715485 /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				9B21FD5B241051CA006F7AED /* Info.plist */,
 				9B880BA72412EDF900715485 /* Exceptions.swift */,
 				9B5B5B302414670800D568E6 /* Extension+Date.swift */,
+				9B412CAB241AC11D0078812E /* Extension+String.swift */,
 				9BE2A7D0241716BE0083D83F /* Extension+UITextField.swift */,
 			);
 			path = C0769778_MidTerm_MAD3115W2020;
@@ -333,6 +336,7 @@
 				9BCF67532414562F00886E59 /* Bill.swift in Sources */,
 				9B2C5EFB241824B6000EA1A2 /* BillTableViewCell.swift in Sources */,
 				9BCF67572414589E00886E59 /* Hydro.swift in Sources */,
+				9B412CAC241AC11D0078812E /* Extension+String.swift in Sources */,
 				9BCF6755241456BE00886E59 /* Mobile.swift in Sources */,
 				9BE2A7D1241716BE0083D83F /* Extension+UITextField.swift in Sources */,
 				9BBE15B72411B04B003ECD32 /* AddNewCustomerViewController.swift in Sources */,
