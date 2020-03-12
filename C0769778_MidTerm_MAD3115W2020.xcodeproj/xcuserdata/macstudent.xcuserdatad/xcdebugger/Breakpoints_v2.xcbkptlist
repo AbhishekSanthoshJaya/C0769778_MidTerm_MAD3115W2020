@@ -3,4 +3,70 @@
    uuid = "56490A1F-4954-429B-9724-49403C5E34B7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FC32673-2429-4620-8492-702E493C7727"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "C0769778_MidTerm_MAD3115W2020/AddNewBillViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "btnAddBill(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5FC32673-2429-4620-8492-702E493C7727 - 66663b2e82d0962a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C0769778_MidTerm_MAD3115W2020.AddNewBillViewController.btnAddBill(Any) -&gt; ()"
+                  moduleName = "C0769778_MidTerm_MAD3115W2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/C0769778_MidTerm_MAD3115W2020/C0769778_MidTerm_MAD3115W2020/AddNewBillViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1090">
+               </Location>
+               <Location
+                  uuid = "5FC32673-2429-4620-8492-702E493C7727 - 66663b2e82d0962a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "C0769778_MidTerm_MAD3115W2020.AddNewBillViewController.btnAddBill(Any) -&gt; ()"
+                  moduleName = "C0769778_MidTerm_MAD3115W2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/C0769778_MidTerm_MAD3115W2020/C0769778_MidTerm_MAD3115W2020/AddNewBillViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "7866">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14B9889B-B0C2-4764-BEAA-C7320C1EE017"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "C0769778_MidTerm_MAD3115W2020/AddNewBillViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "btnAddBill(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

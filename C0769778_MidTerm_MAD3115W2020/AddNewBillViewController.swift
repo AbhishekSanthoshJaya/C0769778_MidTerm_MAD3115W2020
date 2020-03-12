@@ -19,7 +19,6 @@ class AddNewBillViewController: UIViewController
     @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillType: UITextField!
     @IBOutlet weak var segmentBilltype: UISegmentedControl!
-    
     @IBOutlet weak var txtHydUnits: UITextField!
     @IBOutlet weak var txtHydAgency: UITextField!
     @IBOutlet weak var txtIntData: UITextField!
@@ -29,6 +28,7 @@ class AddNewBillViewController: UIViewController
     @IBOutlet weak var txtMobNumber: UITextField!
     @IBOutlet weak var txtMobPlan: UITextField!
     @IBOutlet weak var txtMobManufacturer: UITextField!
+    var selectedCustomer: Customer?
     var currentSlected: Int = 0
     var datePicker : UIDatePicker!
     var myPickerView : UIPickerView!
@@ -47,6 +47,30 @@ class AddNewBillViewController: UIViewController
             self.txtBillDate.text = dateformatter.string(from: datePicker.date)
         }
         self.txtBillDate.resignFirstResponder() 
+    }
+    
+    @IBAction func btnAddBill(_ sender: Any) {
+        if (segmentBilltype.selectedSegmentIndex == 0){
+            if(Validations.mobileNumber(number: txtMobNumber.text!) == true){
+            let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
+                selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+            let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
+                self.present(alertController, animated: true, completion: nil)
+            }
+                else {
+                    let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
+                    return
+                }
+        }
+    }
+    
+    func dismissView()
+    {
+
+        navigationController?.popViewController(animated: true)
     }
     
     func initialSetting(){
@@ -68,7 +92,6 @@ class AddNewBillViewController: UIViewController
             self.txtHydUnits.isHidden = true;
             self.txtHydAgency.isHidden = true;
             initialSetting()
-//            let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
         }
         if(segmentBilltype.selectedSegmentIndex == 1) {
             self.txtMobMins.isHidden = true

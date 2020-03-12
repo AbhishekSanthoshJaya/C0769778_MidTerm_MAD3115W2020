@@ -39,6 +39,7 @@ class ShowBillDetailsViewController: UIViewController {
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let addNewBillVC = sb.instantiateViewController(identifier: "addNewBillVC") as! AddNewBillViewController
+        addNewBillVC.selectedCustomer = self.customerBill
         navigationController?.pushViewController(addNewBillVC, animated: true)
     }
     /*
