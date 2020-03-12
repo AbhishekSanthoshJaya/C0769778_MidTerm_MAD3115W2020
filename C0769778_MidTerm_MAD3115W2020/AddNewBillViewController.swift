@@ -11,9 +11,9 @@ import UIKit
 class AddNewBillViewController: UIViewController
 {
     
-    var mobileBills = [Mobile]()
-    var internetBills = [Internet]()
-    var hydroBills = [Hydro]()
+//    var mobileBills = [Mobile]()
+//    var internetBills = [Internet]()
+//    var hydroBills = [Hydro]()
     
     @IBOutlet weak var txtBillId: UITextField!
     @IBOutlet weak var txtBillDate: UITextField!
@@ -22,6 +22,8 @@ class AddNewBillViewController: UIViewController
     
     @IBOutlet weak var txtHydUnits: UITextField!
     @IBOutlet weak var txtHydAgency: UITextField!
+    @IBOutlet weak var txtIntData: UITextField!
+    @IBOutlet weak var txtIntProvider: UITextField!
     @IBOutlet weak var txtMobMins: UITextField!
     @IBOutlet weak var txtMobData: UITextField!
     @IBOutlet weak var txtMobNumber: UITextField!
@@ -35,8 +37,7 @@ class AddNewBillViewController: UIViewController
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         self.txtBillDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
-        self.txtHydUnits.isHidden = true;
-        self.txtHydAgency.isHidden = true;
+        self.initialSetting()
         // Do any additional setup after loading the view.
     }
     @objc func tapDone() {
@@ -48,12 +49,52 @@ class AddNewBillViewController: UIViewController
         self.txtBillDate.resignFirstResponder() 
     }
     
+    func initialSetting(){
+        self.txtHydUnits.isHidden = true;
+        self.txtHydAgency.isHidden = true;
+        self.txtIntData.isHidden = true
+        self.txtIntProvider.isHidden = true
+        self.txtMobMins.isHidden = false
+        self.txtMobData.isHidden = false
+        self.txtMobManufacturer.isHidden = false
+        self.txtMobPlan.isHidden = false
+        self.txtMobNumber.isHidden = false
+        self.txtMobManufacturer.isHidden = false
+    }
+    
     
     @IBAction func segBill(_ sender: Any) {
         if (segmentBilltype.selectedSegmentIndex == 0) {
             self.txtHydUnits.isHidden = true;
             self.txtHydAgency.isHidden = true;
-            let m = Mobile(billId: txtBillId!, billDate: txtBillDate, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer!, planName: txtMobPlan!, mobileNumber: txtMobNumber!, mobGbUsed: txtMobData!, minute: txtMobMins!)
+            initialSetting()
+//            let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
+        }
+        if(segmentBilltype.selectedSegmentIndex == 1) {
+            self.txtMobMins.isHidden = true
+            self.txtMobData.isHidden = true
+            self.txtMobManufacturer.isHidden = true
+            self.txtMobPlan.isHidden = true
+            self.txtMobNumber.isHidden = true
+            self.txtMobManufacturer.isHidden = true
+            self.txtHydAgency.isHidden = false
+            self.txtHydUnits.isHidden = false
+            self.txtIntData.isHidden = true
+            self.txtIntProvider.isHidden = true
+//            let billObj = Hydro(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.HYDRO, agencyName: txtHydAgency!.text!, unitsUsed: Double(txtHydUnits!.text!) as! Double)
+        }
+        if(segmentBilltype.selectedSegmentIndex == 2){
+            self.txtMobMins.isHidden = true
+            self.txtMobData.isHidden = true
+            self.txtMobManufacturer.isHidden = true
+            self.txtMobPlan.isHidden = true
+            self.txtMobNumber.isHidden = true
+            self.txtMobManufacturer.isHidden = true
+            self.txtHydAgency.isHidden = true
+            self.txtHydUnits.isHidden = true
+            self.txtIntData.isHidden = false
+            self.txtIntProvider.isHidden = false
+//            let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
         }
     }
     
