@@ -91,6 +91,7 @@ class AddNewBillViewController: UIViewController
             let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
             selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
             billSuccess()
+            
             }
             else {
                 let alertController = UIAlertController(title:"Error", message: "Bill ID must contain IN", preferredStyle: .alert)
@@ -119,7 +120,7 @@ class AddNewBillViewController: UIViewController
 
         navigationController?.popViewController(animated: true)
     }
-    
+
     func firstSetting(){
     self.txtMobMins.isHidden = true
     self.txtMobData.isHidden = true

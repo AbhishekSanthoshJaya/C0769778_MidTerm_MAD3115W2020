@@ -47,10 +47,24 @@ class ShowBillDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tblBillDetails.reloadData()
+        self.navigationItem.hidesBackButton = true
+        addToCustomersButton()
     }
     override func viewDidAppear(_ animated: Bool) {
         self.tblBillDetails.reloadData()
     }
+        public func addToCustomersButton()
+        {
+            let logOutButton = UIBarButtonItem(title: "Customers", style: .plain, target: self, action: #selector(self.backToCustomerList))
+            self.navigationItem.leftBarButtonItem = logOutButton
+        }
+    
+        @objc func backToCustomerList()
+        {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+            navigationController?.pushViewController(customerListTableVC, animated: true)
+        }
     /*
     // MARK: - Navigation
 
