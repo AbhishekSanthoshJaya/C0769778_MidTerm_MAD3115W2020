@@ -42,6 +42,10 @@ class ShowBillDetailsViewController: UIViewController {
         addNewBillVC.selectedCustomer = self.customerBill
         navigationController?.pushViewController(addNewBillVC, animated: true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tblBillDetails.reloadData()
+    }
     /*
     // MARK: - Navigation
 

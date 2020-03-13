@@ -55,6 +55,7 @@ class AddNewBillViewController: UIViewController
                 if((txtBillId.text?.contains("MB"))!){
             let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
                 selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+                    billSuccess()
                 }
                 else{
                     let alertController = UIAlertController(title:"Error", message: "Bill ID must contain MB", preferredStyle: .alert)
@@ -82,7 +83,7 @@ class AddNewBillViewController: UIViewController
             }
         }
         if(segmentBilltype.selectedSegmentIndex == 2){
-            if((txtBillId.text?.contains("HY"))!){
+            if((txtBillId.text?.contains("IN"))!){
             let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
             selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
             billSuccess()
