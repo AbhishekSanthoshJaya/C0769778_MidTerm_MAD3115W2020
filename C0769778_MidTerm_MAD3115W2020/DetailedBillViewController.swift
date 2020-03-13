@@ -14,6 +14,7 @@ class DetailedBillViewController: UIViewController {
     var currentHydroBill: Hydro?
     var currentInternetBill: Internet?
     
+    @IBOutlet weak var lbldetailBilltype: UILabel!
     @IBOutlet weak var lbldetailbillId: UILabel!
     @IBOutlet weak var lbldetailbillDate: UILabel!
     @IBOutlet weak var lbldetailBillProvider: UILabel!
@@ -22,12 +23,13 @@ class DetailedBillViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         self.lbldetailbillId.text = currentMobileBill?.billId
         self.lbldetailbillDate.text = currentMobileBill?.billDate.getFormattedDate()
         self.lbldetailBillProvider.text = currentMobileBill?.manufacturerName
+        self.lbldetailBillUsed.text = currentMobileBill?.planName
+        self.lbldetailBilltype.text = "YOUR MOBILE BILL"
     }
-    
-
     /*
     // MARK: - Navigation
 
