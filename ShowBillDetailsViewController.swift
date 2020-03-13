@@ -24,9 +24,10 @@ class ShowBillDetailsViewController: UIViewController {
         self.title = "CUSTOMER BILLS"
         self.lblAllAmount.text = String(format:"$%.2f", (customerBill?.allBillsTotal())!)
         lblAllAmount.font = lblAllAmount.font.withSize(40.0)
+        lblAllAmount.textColor = UIColor.white
         lblAllAmount.textAlignment = .center
         self.addNewBillButton()
-        lblBackground.backgroundColor = UIColor .red;
+        lblBackground.backgroundColor = UIColor .systemIndigo;
 //        tblBillDetails.dataSource = self
 //        self.tblBillDetails.delegate = self
 //        self.tblBillDetails.dataSource = self
