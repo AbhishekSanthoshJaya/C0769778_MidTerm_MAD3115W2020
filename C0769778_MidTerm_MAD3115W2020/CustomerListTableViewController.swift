@@ -22,7 +22,7 @@ class CustomerListTableViewController: UIViewController {
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
-        self.setupSearchBar()
+        //self.setupSearchBar()
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tblViewCustomerList.reloadData()
