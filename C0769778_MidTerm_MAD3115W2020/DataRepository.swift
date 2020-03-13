@@ -16,7 +16,7 @@ static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
 private var mobileBills = [Mobile]()
 private var hydroBills = [Hydro]()
-private var interetBills = [Internet]()
+private var internetBills = [Internet]()
     
 private init(){
 }
@@ -32,6 +32,10 @@ func getMobileBills() -> [Mobile]{
 func getHydroBills() -> [Hydro]{
     return self.hydroBills
 }
+
+func getInternetBills() -> [Internet]{
+    return self.internetBills
+}
     
 func addMobileBills(m: Mobile){
     mobileBills.append(m)
@@ -42,7 +46,7 @@ func addHydroBills(h: Hydro){
 }
     
 func addInternetBills(i: Internet){
-    interetBills.append(i)
+    internetBills.append(i)
 }
 //--------- CUSTOMER OBJECTS ---------
     

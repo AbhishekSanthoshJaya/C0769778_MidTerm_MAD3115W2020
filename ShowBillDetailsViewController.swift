@@ -107,7 +107,21 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         return CGFloat(150.0)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let mobileBills = DataRepository.getInstance().getMobileBills()
+        let hydroBills = DataRepository.getInstance().getHydroBills()
+        let internetBills = DataRepository.getInstance().getInternetBills()
+        let selectedMobBill = mobileBills[indexPath.section]
+        let selectedHydBill = hydroBills[indexPath.section]
+        let selectedIntBill = internetBills[indexPath.section]
+        
+        
+        let sb = UIStoryboard(name:"Main", bundle: nil)
+        let detailedBillVC = sb.instantiateViewController(identifier: "detailedBillVC") as DetailedBillViewController
+        detailedBillVC.currentMobileBill = selectedMobBill
+        detailedBillVC.currentHydroBill = selectedHydBill
+        detailedBillVC.currentInternetBill = selectedIntBill
+        self.navigationController?.pushViewController(detailedBillVC, animated: true)
+
     }
     //func tableViewfooter
      

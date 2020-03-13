@@ -10,15 +10,21 @@ import UIKit
 
 class DetailedBillViewController: UIViewController {
 
+    var currentMobileBill: Mobile?
+    var currentHydroBill: Hydro?
+    var currentInternetBill: Internet?
+    
     @IBOutlet weak var lbldetailbillId: UILabel!
     @IBOutlet weak var lbldetailbillDate: UILabel!
     @IBOutlet weak var lbldetailBillProvider: UILabel!
     @IBOutlet weak var lbldetailBillUsed: UILabel!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.lbldetailbillId.text = currentMobileBill?.billId
+        self.lbldetailbillDate.text = currentMobileBill?.billDate.getFormattedDate()
+        self.lbldetailBillProvider.text = currentMobileBill?.manufacturerName
     }
     
 
