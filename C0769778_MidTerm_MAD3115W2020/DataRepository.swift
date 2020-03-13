@@ -17,45 +17,81 @@ lazy var customerDictionary = Dictionary<String, Customer>()
 private var mobileBills = [Mobile]()
 private var hydroBills = [Hydro]()
 private var internetBills = [Internet]()
+private var bills = [Bill]()
     
-private init(){
-}
-
-static func getInstance() -> DataRepository{
-return repoObj
+    private init(){
     }
-   
-func getMobileBills() -> [Mobile]{
-    return self.mobileBills
-}
-    
-func getHydroBills() -> [Hydro]{
-    return self.hydroBills
-}
 
-func getInternetBills() -> [Internet]{
-    return self.internetBills
-}
-    
-func addMobileBills(m: Mobile){
-    mobileBills.append(m)
-}
+    static func getInstance() -> DataRepository{
+    return repoObj
+        }
+       
+    func getMobileBills() -> [Mobile]{
+        return self.mobileBills
+    }
+        
+    func getHydroBills() -> [Hydro]{
+        return self.hydroBills
+    }
 
-func addHydroBills(h: Hydro){
-    hydroBills.append(h)
-}
+    func getInternetBills() -> [Internet]{
+        return self.internetBills
+    }
+        
+    func addMobileBills(m: Mobile){
+        mobileBills.append(m)
+    }
+
+    func addHydroBills(h: Hydro){
+        hydroBills.append(h)
+    }
+        
+    func addInternetBills(i: Internet){
+        internetBills.append(i)
+    }
     
-func addInternetBills(i: Internet){
-    internetBills.append(i)
-}
+    func addCustomer(customer: Customer)
+      {
+        let cid = customer.customerId
+        customerDictionary.updateValue(customer, forKey: cid)
+      }
+    
+    func dictionaryToArray() -> [Customer]{
+    var customerListStorage: [Customer] = []
+    for i in customerDictionary{
+        customerListStorage.append(i.value)
+     }
+    return customerListStorage
+    }
+    
+    func getHydroBill(billId: String) -> Hydro? {
+        for bill in self.hydroBills{
+            if bill.billId == billId{
+                return bill
+            }
+        }
+        return nil
+    }
+    
+    func getMobileBill(billId: String) -> Mobile? {
+        for bill in self.mobileBills{
+            if bill.billId == billId {
+                return bill
+            }
+        }
+        return nil
+    }
+    
+    func getInternetBill(billId: String) -> Internet? {
+        for bill in self.internetBills {
+            if bill.billId == billId {
+                return bill
+            }
+        }
+        return nil
+    }
 //--------- CUSTOMER OBJECTS ---------
     
-func addCustomer(customer: Customer)
-  {
-    let cid = customer.customerId
-    customerDictionary.updateValue(customer, forKey: cid)
-  }
-
 func loadData(){
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy/MM/dd"
@@ -86,15 +122,6 @@ func loadData(){
        addInternetBills(i: in2)
        addHydroBills(h: h1)
     }
-    
-func dictionaryToArray() -> [Customer]{
-    var customerListStorage: [Customer] = []
-    for i in customerDictionary{
-        customerListStorage.append(i.value)
-     }
-    return customerListStorage
-    }
-    
 }
 
 

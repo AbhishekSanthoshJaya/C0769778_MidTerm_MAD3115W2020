@@ -30,7 +30,8 @@ init(billId: String, billDate: Date, billType: BillType)
     
 func billCalculate() -> Double
  {
-var dummybillAmount = 0.0
+    let dummybillAmount = 0.0
     return dummybillAmount
  }
+    
 }

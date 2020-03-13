@@ -17,8 +17,9 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var lblAgency: UILabel!
     @IBOutlet weak var lblUsage: UILabel!
     @IBOutlet weak var billAmount: UILabel!
+    var bills = [Bill]()
     
-    func setData(){
+    func setMobileData(){
      
     }
     override func awakeFromNib() {

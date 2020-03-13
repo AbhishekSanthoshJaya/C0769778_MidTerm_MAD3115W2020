@@ -13,37 +13,33 @@ class CustomerListTableViewController: UIViewController {
     @IBOutlet weak var lblCustomerList: UILabel!
     @IBOutlet weak var tblViewCustomerList: UITableView!
     let originalCustomerArray = DataRepository.getInstance().dictionaryToArray()
-    var filteredCustomerArray: [Customer]?
     var searchController: UISearchController!
-   // var searchController: UISearchController!
-    //var originalCustomers = DataRepository.getInstance().dictionaryToArray()
-    //var filteredCustomers = DataRepository.getInstance().dictionaryToArray()
+    var filteredCustomerArray = DataRepository.getInstance().dictionaryToArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "CUSTOMER LIST"
+        self.title = "Customers"
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
-       // self.setupSearchBar()
+        self.setupSearchBar()
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tblViewCustomerList.reloadData()
     }
      
-//    private func setupSearchBar()
-//    {
-//        //Initialize SearchView
-//        self.searchController = UISearchController(searchResultsController: nil)
-//
-//        //Add Search Bar to header
-//        searchController.searchResultsUpdater = self
-//        searchController.hidesNavigationBarDuringPresentation = true
-//        searchController.dimsBackgroundDuringPresentation = false
-//        //Set search bar on tableview
-//        tblViewCustomerList.tableHeaderView = searchController.searchBar
-//
-//    }
+    private func setupSearchBar()
+    {
+        //Initialize SearchView
+        self.searchController = UISearchController(searchResultsController: nil)
+
+        //Add Search Bar to header
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
+        //Set search bar on tableview
+        tblViewCustomerList.tableHeaderView = searchController.searchBar
+    }
     
     private func addlogOutButton()
     {

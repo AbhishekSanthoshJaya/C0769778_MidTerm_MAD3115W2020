@@ -166,44 +166,5 @@ class AddNewBillViewController: UIViewController
 //            let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
         }
     }
-    
-//    func pickUp(_ textField : UITextField){
-//
-//    // UIPickerView
-//    self.myPickerView = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-//    self.myPickerView.delegate = self
-//    self.myPickerView.dataSource = self
-//    self.myPickerView.backgroundColor = UIColor.white
-//    textField.inputView = self.myPickerView
-//
-//    // ToolBar
-//    let toolBar = UIToolbar()
-//    toolBar.barStyle = .default
-//    toolBar.isTranslucent = true
-//    toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
-//    toolBar.sizeToFit()
-//
-//    // Adding Button ToolBar
-//        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewBillViewController.doneClick))
-//    let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-//    let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewBillViewController.cancelClick))
-//    toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-//    toolBar.isUserInteractionEnabled = true
-//    textField.inputAccessoryView = toolBar
-//    }
-    
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

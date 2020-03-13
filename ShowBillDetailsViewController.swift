@@ -11,9 +11,6 @@ import UIKit
 class ShowBillDetailsViewController: UIViewController {
     var customerBill: Customer?
     var bills = [Bill]()
-//    var mobBills = [Mobile]()
-//    var hydBills = [Hydro]()
-//    var intBills = [Internet]()
     @IBOutlet weak var lblAllAmount: UILabel!
     @IBOutlet weak var tblBillDetails: UITableView!
     
@@ -63,17 +60,8 @@ class ShowBillDetailsViewController: UIViewController {
         {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
-            navigationController?.pushViewController(customerListTableVC, animated: true)
+navigationController?.pushViewController(customerListTableVC, animated: true)
         }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -121,20 +109,24 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
         return CGFloat(150.0)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mobileBills = DataRepository.getInstance().getMobileBills()
-        let hydroBills = DataRepository.getInstance().getHydroBills()
-        let internetBills = DataRepository.getInstance().getInternetBills()
-        let selectedMobBill = mobileBills[indexPath.section]
-        let selectedHydBill = hydroBills[indexPath.section]
-        let selectedIntBill = internetBills[indexPath.section]
+//        let mobileBills = DataRepository.getInstance().getMobileBills()
+//        let hydroBills = DataRepository.getInstance().getHydroBills()
+//        let internetBills = DataRepository.getInstance().getInternetBills()
+//        let selectedMobBill = mobileBills[indexPath.section]
+//        let selectedHydBill = hydroBills[indexPath.section]
+//        let selectedIntBill = internetBills[indexPath.section]
         
+        let selectedBill = self.bills[indexPath.row]
         
         let sb = UIStoryboard(name:"Main", bundle: nil)
         let detailedBillVC = sb.instantiateViewController(identifier: "detailedBillVC") as DetailedBillViewController
-        detailedBillVC.currentMobileBill = selectedMobBill
-        detailedBillVC.currentHydroBill = selectedHydBill
-        detailedBillVC.currentInternetBill = selectedIntBill
-        self.navigationController?.pushViewController(detailedBillVC, animated: true)
+          
+//        detailedBillVC.currentMobileBill = selectedMobBill
+//        detailedBillVC.currentHydroBill = selectedHydBill
+//        detailedBillVC.currentInternetBill = selectedIntBill
+          detailedBillVC.currentBill = selectedBill
+            
+self.navigationController?.pushViewController(detailedBillVC, animated: true)
 
     }
     //func tableViewfooter
