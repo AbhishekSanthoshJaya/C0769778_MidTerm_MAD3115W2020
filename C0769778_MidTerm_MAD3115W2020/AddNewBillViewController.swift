@@ -99,7 +99,8 @@ class AddNewBillViewController: UIViewController
     }
     func billSuccess(){
         let alertController = UIAlertController(title: "Success", message: "Bill Added", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.forceReloadBillTable()}))
+        //alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.forceReloadBillTable()}))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -108,12 +109,21 @@ class AddNewBillViewController: UIViewController
         let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
         navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
+    
     func dismissView()
     {
 
         navigationController?.popViewController(animated: true)
     }
     
+    func firstSetting(){
+    self.txtMobMins.isHidden = true
+    self.txtMobData.isHidden = true
+    self.txtMobManufacturer.isHidden = true
+    self.txtMobPlan.isHidden = true
+    self.txtMobNumber.isHidden = true
+    self.txtMobManufacturer.isHidden = true
+    }
     func initialSetting(){
         self.txtHydUnits.isHidden = true;
         self.txtHydAgency.isHidden = true;
@@ -135,12 +145,7 @@ class AddNewBillViewController: UIViewController
             initialSetting()
         }
         if(segmentBilltype.selectedSegmentIndex == 1) {
-            self.txtMobMins.isHidden = true
-            self.txtMobData.isHidden = true
-            self.txtMobManufacturer.isHidden = true
-            self.txtMobPlan.isHidden = true
-            self.txtMobNumber.isHidden = true
-            self.txtMobManufacturer.isHidden = true
+            firstSetting()
             self.txtHydAgency.isHidden = false
             self.txtHydUnits.isHidden = false
             self.txtIntData.isHidden = true
@@ -148,12 +153,7 @@ class AddNewBillViewController: UIViewController
 //            let billObj = Hydro(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.HYDRO, agencyName: txtHydAgency!.text!, unitsUsed: Double(txtHydUnits!.text!) as! Double)
         }
         if(segmentBilltype.selectedSegmentIndex == 2){
-            self.txtMobMins.isHidden = true
-            self.txtMobData.isHidden = true
-            self.txtMobManufacturer.isHidden = true
-            self.txtMobPlan.isHidden = true
-            self.txtMobNumber.isHidden = true
-            self.txtMobManufacturer.isHidden = true
+            firstSetting()
             self.txtHydAgency.isHidden = true
             self.txtHydUnits.isHidden = true
             self.txtIntData.isHidden = false
