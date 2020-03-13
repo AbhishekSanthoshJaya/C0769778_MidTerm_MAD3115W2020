@@ -11,8 +11,8 @@ import UIKit
 
 public class Hydro: Bill
 {
-private var agencyName: String = ""
-private var unitsUsed: Double = 0.0
+ var agencyName: String = ""
+ var unitsUsed: Double = 0.0
 
   init(billId: String, billDate: Date, billType: BillType, agencyName:String, unitsUsed: Double)
 {

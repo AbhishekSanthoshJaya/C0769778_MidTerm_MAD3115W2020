@@ -11,8 +11,8 @@ import UIKit
 
 class Internet: Bill
   {
-    private var providerName: String
-    private var gbUsed: Double
+     var providerName: String
+     var gbUsed: Double
 
 init(billId: String, billDate: Date, billType: BillType, providerName:String, gbUsed: Double)
   {
