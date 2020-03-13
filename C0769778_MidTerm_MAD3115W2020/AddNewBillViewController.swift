@@ -102,14 +102,15 @@ class AddNewBillViewController: UIViewController
     }
     func billSuccess(){
         let alertController = UIAlertController(title: "Success", message: "Bill Added", preferredStyle: .alert)
-        //alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.forceReloadBillTable()}))
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.forceReloadBillTable()}))
+       //alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
         self.present(alertController, animated: true, completion: nil)
     }
     
     func forceReloadBillTable(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
+        showBillDetailsVC.customerBill = self.selectedCustomer
         navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
     
