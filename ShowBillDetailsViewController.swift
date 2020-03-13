@@ -27,6 +27,7 @@ class ShowBillDetailsViewController: UIViewController {
         lblAllAmount.textAlignment = .center
         self.addNewBillButton()
         lblBackground.backgroundColor = UIColor .red;
+        tblBillDetails.dataSource = self
     }
     
     private func addNewBillButton()
