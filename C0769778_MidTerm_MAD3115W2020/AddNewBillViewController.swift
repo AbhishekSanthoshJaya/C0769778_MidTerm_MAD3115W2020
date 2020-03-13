@@ -35,7 +35,7 @@ class AddNewBillViewController: UIViewController
     var pickerDataBillType = ["Mobile" , "Internet" , "Hydro"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
         self.txtBillDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         self.initialSetting()
         // Do any additional setup after loading the view.
@@ -49,6 +49,9 @@ class AddNewBillViewController: UIViewController
         self.txtBillDate.resignFirstResponder() 
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//    }
     
     @IBAction func btnAddBill(_ sender: Any) {
         if (segmentBilltype.selectedSegmentIndex == 0){

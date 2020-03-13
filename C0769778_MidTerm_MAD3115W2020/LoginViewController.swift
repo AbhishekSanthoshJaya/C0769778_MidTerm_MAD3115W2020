@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swchRememberMe: UISwitch!
 
-
     @IBAction func btnShowHidePW(_ sender: UIButton) {
         txtPassword.isSecureTextEntry.toggle()
     }

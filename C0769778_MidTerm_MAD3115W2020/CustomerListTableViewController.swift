@@ -12,24 +12,39 @@ class CustomerListTableViewController: UIViewController {
 
     @IBOutlet weak var lblCustomerList: UILabel!
     @IBOutlet weak var tblViewCustomerList: UITableView!
+    let originalCustomerArray = DataRepository.getInstance().dictionaryToArray()
+    var filteredCustomerArray: [Customer]?
+    var searchController: UISearchController!
    // var searchController: UISearchController!
     //var originalCustomers = DataRepository.getInstance().dictionaryToArray()
     //var filteredCustomers = DataRepository.getInstance().dictionaryToArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.setupSearchBar()
         self.title = "CUSTOMER LIST"
         self.addlogOutButton()
         self.addNewCustomerButton()
         self.navigationItem.hidesBackButton = true
+       // self.setupSearchBar()
     }
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         self.tblViewCustomerList.reloadData()
     }
-        
+     
+//    private func setupSearchBar()
+//    {
+//        //Initialize SearchView
+//        self.searchController = UISearchController(searchResultsController: nil)
+//
+//        //Add Search Bar to header
+//        searchController.searchResultsUpdater = self
+//        searchController.hidesNavigationBarDuringPresentation = true
+//        searchController.dimsBackgroundDuringPresentation = false
+//        //Set search bar on tableview
+//        tblViewCustomerList.tableHeaderView = searchController.searchBar
+//
+//    }
+    
     private func addlogOutButton()
     {
         let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(self.logOut))
@@ -92,18 +107,38 @@ class CustomerListTableViewController: UIViewController {
             addBills.selectedCustomer = selectedCustomer
             self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
         }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return UITableViewCell.EditingStyle.delete
+       }
     
-    
+       func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+           return true
+       }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CustomerListTableViewController: UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
     }
-    */
 
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+}
 
+extension CustomerListTableViewController: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredCustomerArray = originalCustomerArray.filter { c in
+                return c.name!.lowercased().contains(searchText.lowercased())
+            }
+            
+        } else {
+            filteredCustomerArray = originalCustomerArray
+        }
+        tblViewCustomerList.reloadData()
+    }
+
+}
