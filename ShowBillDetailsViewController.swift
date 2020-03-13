@@ -106,6 +106,9 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(150.0)
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
     //func tableViewfooter
      
 //     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -11,18 +11,39 @@ import UIKit
 
 
 class DataRepository {
-   
+  
 static private var repoObj = DataRepository()
 lazy var customerDictionary = Dictionary<String, Customer>()
+private var mobileBills = [Mobile]()
+private var hydroBills = [Hydro]()
+private var interetBills = [Internet]()
     
 private init(){
 }
 
- 
 static func getInstance() -> DataRepository{
 return repoObj
     }
+   
+func getMobileBills() -> [Mobile]{
+    return self.mobileBills
+}
     
+func getHydroBills() -> [Hydro]{
+    return self.hydroBills
+}
+    
+func addMobileBills(m: Mobile){
+    mobileBills.append(m)
+}
+
+func addHydroBills(h: Hydro){
+    hydroBills.append(h)
+}
+    
+func addInternetBills(i: Internet){
+    interetBills.append(i)
+}
 //--------- CUSTOMER OBJECTS ---------
     
 func addCustomer(customer: Customer)
@@ -54,6 +75,12 @@ func loadData(){
        addCustomer(customer: c1)
        addCustomer(customer: c2)
        addCustomer(customer: c3)
+       addMobileBills(m: m1)
+       addMobileBills(m: m2)
+       addHydroBills(h: h2)
+       addInternetBills(i: in1)
+       addInternetBills(i: in2)
+       addHydroBills(h: h1)
     }
     
 func dictionaryToArray() -> [Customer]{
