@@ -59,6 +59,7 @@ class AddNewBillViewController: UIViewController
                 if((txtBillId.text?.contains("MB"))!){
             let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
                 selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+                    DataRepository.getInstance().addMobileBills(m: billObj)
                     billSuccess()
                 }
                 else{
@@ -77,6 +78,7 @@ class AddNewBillViewController: UIViewController
             if((txtBillId.text?.contains("HY"))!){
             let billObj = Hydro(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.HYDRO, agencyName: txtHydAgency!.text!, unitsUsed: Double(txtHydUnits!.text!)!)
             selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+                DataRepository.getInstance().addHydroBills(h: billObj)
             billSuccess()
             }
             else {
@@ -90,6 +92,7 @@ class AddNewBillViewController: UIViewController
             if((txtBillId.text?.contains("IN"))!){
             let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
             selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+                DataRepository.getInstance().addInternetBills(i: billObj)
             billSuccess()
             
             }
