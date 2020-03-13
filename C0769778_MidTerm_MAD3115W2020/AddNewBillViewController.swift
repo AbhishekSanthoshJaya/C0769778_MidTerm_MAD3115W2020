@@ -52,21 +52,54 @@ class AddNewBillViewController: UIViewController
     @IBAction func btnAddBill(_ sender: Any) {
         if (segmentBilltype.selectedSegmentIndex == 0){
             if(Validations.mobileNumber(number: txtMobNumber.text!) == true){
+                if((txtBillId.text?.contains("MB"))!){
             let billObj = Mobile(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.MOBILE, manufacturerName: txtMobManufacturer.text!, planName: txtMobPlan!.text!, mobileNumber: txtMobNumber!.text!, mobGbUsed: Int(txtMobData!.text!)!, minute: Int(txtMobMins!.text!)!)
                 selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
-            let alertController = UIAlertController(title: "Success", message: "Customer Added", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
-                self.present(alertController, animated: true, completion: nil)
-            }
-                else {
-                    let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+                }
+                else{
+                    let alertController = UIAlertController(title:"Error", message: "Bill ID must contain MB", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                     self.present(alertController, animated: true, completion: nil)
                     return
                 }
+            }
+            let alertController = UIAlertController(title:"Error", message: "Invalid phone number", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if(segmentBilltype.selectedSegmentIndex == 1){
+            if((txtBillId.text?.contains("HY"))!){
+            let billObj = Hydro(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.HYDRO, agencyName: txtHydAgency!.text!, unitsUsed: Double(txtHydUnits!.text!)!)
+            selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+            billSuccess()
+            }
+            else {
+                let alertController = UIAlertController(title:"Error", message: "Bill ID must contain HY", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }
+        if(segmentBilltype.selectedSegmentIndex == 2){
+            if((txtBillId.text?.contains("HY"))!){
+            let billObj = Internet(billId: txtBillId.text!, billDate:  (txtBillDate.text?.toDate())!, billType: BillType.INTERNET, providerName: txtIntProvider!.text!, gbUsed: Double(txtIntData!.text!) as! Double)
+            selectedCustomer?.newBill(bill: billObj, billId: txtBillId.text!)
+            billSuccess()
+            }
+            else {
+                let alertController = UIAlertController(title:"Error", message: "Bill ID must contain IN", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
         }
     }
-    
+    func billSuccess(){
+        let alertController = UIAlertController(title: "Success", message: "Bill Added", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.dismissView()}))
+        self.present(alertController, animated: true, completion: nil)
+    }
     func dismissView()
     {
 

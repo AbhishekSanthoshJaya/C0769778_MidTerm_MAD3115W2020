@@ -29,7 +29,6 @@ class Customer
         self.password = password
         self.location = location
         self.dateOfBirth = dateOfBirth
-        
     }
     
     func newBill(bill: Bill, billId: String)

@@ -9,17 +9,12 @@
 import Foundation
 
 extension String {
-
-    func toDate(withFormat format: String = "MMM dd, yyyy")-> Date?{
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(identifier: "Asia/Tehran")
-        dateFormatter.locale = Locale(identifier: "fa-IR")
-        dateFormatter.calendar = Calendar(identifier: .gregorian)
-        dateFormatter.dateFormat = format
-        let date = dateFormatter.date(from: self)
-
-        return date
-
+  func toDate(withFormat format: String = "MMM dd, yyyy") -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = format
+    guard let date = dateFormatter.date(from: self) else {
+      preconditionFailure("Take a look to your format")
     }
+    return date
+  }
 }
