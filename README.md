@@ -10,11 +10,24 @@ Abhishek Santhosh Jaya (C0769778)
 Mid term test: A program that calculates the total bills of a customer. A bill could be for the internet, hydro or mobile usage. A customer may have multiple bills. 
 
 * Evaluation #1 - Edit launchScreen, implement proper login/logout, display a list of customers, add new customers, data access and storage with singleton class, validations, display errors and alerts, display basic customer information
-* Evaluation #2 - 
+* Evaluation #2 - Adding additional bills. Picker/Segment view for bill types. Proper total calculation, proper validations.
 
 ## PROJECT STRUCTURE
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt10.png" alt="Class Structure" style="float: left; margin-right: 10px;"/>
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/classt11.png" alt="Class Structure" style="float: center; margin-right: 50px;"/>
+
+## PROJECT OUTPUT
+Screenshot | Description
+--- | ---
+<img src="https://i.servimg.com/u/f93/18/45/29/87/simula11.png" alt="loginScreen"/> | Login screen for the app. Added validations. Added toggle hide password. Added Remember me. 'Sign up' button goes to add customer view controller.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/simula14.png" alt="customerScreen"/> | List of customers. Search bar added. Logout button and new customer button added.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/simula15.png" alt="addnewcustomer"/> | Adding a new customer. Added validations for phone number and email ID. Added picker view for date of birth. 
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/simula16.png" alt="detailedCustomerView"/> | Detailed view of a single customer. View bills button moves to a screen with all that customer's bills.
+<img src = "https://i93.servimg.com/u/f93/18/45/29/87/simula17.png" alt="detailedBillView"/> |  View of bills. Contains bill amounts and the total amount. Clicking on a bill moves to a more detailed view of the bill. New bill button move to a screen to add a new bill. 
+<img src = "https://i93.servimg.com/u/f93/18/45/29/87/simula18.png" alt = "addingabill"/> | Adding a new bill. Added segment for picking bill type. Removes unncessary text fields when swapping bill types. 
+<img src = "https://i.servimg.com/u/f93/18/45/29/87/simula19.png" alt = "billAddedSuccess" /> | Adding a new hydro bill with ID "HY500"
+<img src = "https://i93.servimg.com/u/f93/18/45/29/87/simula20.png" alt = "newlyaddedbill" /> | The newly added bill with ID "HY500" is now showing on the bill list for the customer.
+<img src= "https://i.servimg.com/u/f93/18/45/29/87/simula21.png" alt = "detailedBillViewer" /> | Clicking on any bill will lead to a more detailed view with additional information.
 
 ## REFERENCES 
 * [Hackingwithswift.com](https://www.hackingwithswift.com/example-code/system/how-to-save-user-settings-using-userdefaults) - Used in remember me on loginViewController
